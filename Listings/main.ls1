@@ -1,0 +1,2433 @@
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\main.OBJ
+ASSEMBLER INVOKED BY: D:\Keil_v5\C51\BIN\A51.EXE .\Objects\main.src PR(.\Listings\main.ls1) EP DEBUG
+
+LOC  OBJ            LINE     SOURCE
+
+                       1     ; .\Objects\main.SRC generated from: main.c
+                       2     ; COMPILER INVOKED BY:
+                       3     ;        D:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRIN
+                             T(.\Listings\main.lst) SRC(.\Objects\main.SRC)
+                       4     
+                       5     $nomod51 
+                       6     
+                       7     NAME    MAIN
+                       8     
+  00DA                 9     CCF2    BIT     0D8H.2
+  0093                10     P0M1    DATA    093H
+  0092                11     P1M0    DATA    092H
+  0096                12     P2M0    DATA    096H
+  0091                13     P1M1    DATA    091H
+  0080                14     P0      DATA    080H
+  00B2                15     P3M0    DATA    0B2H
+  0095                16     P2M1    DATA    095H
+  0090                17     P1      DATA    090H
+  00B4                18     P4M0    DATA    0B4H
+  00B1                19     P3M1    DATA    0B1H
+  00A0                20     P2      DATA    0A0H
+  00CA                21     P5M0    DATA    0CAH
+  00B3                22     P4M1    DATA    0B3H
+  00B0                23     P3      DATA    0B0H
+  00AB                24     WKTCH   DATA    0ABH
+  00D6                25     AC      BIT     0D0H.6
+  00CC                26     P6M0    DATA    0CCH
+  00C9                27     P5M1    DATA    0C9H
+  00C0                28     P4      DATA    0C0H
+  00E2                29     P7M0    DATA    0E2H
+  00CB                30     P6M1    DATA    0CBH
+  00C8                31     P5      DATA    0C8H
+  00E8                32     P6      DATA    0E8H
+  00E1                33     P7M1    DATA    0E1H
+  00AF                34     EA      BIT     0A8H.7
+  00F8                35     P7      DATA    0F8H
+  00AA                36     WKTCL   DATA    0AAH
+  00CE                37     SPCTL   DATA    0CEH
+  00DF                38     CF      BIT     0D8H.7
+  00F9                39     CH      DATA    0F9H
+  00A2                40     P_SW1   DATA    0A2H
+  00BA                41     P_SW2   DATA    0BAH
+  00E5                42     DPH1    DATA    0E5H
+  00AD                43     EADC    BIT     0A8H.5
+  00A8                44     IE      DATA    0A8H
+  00E9                45     CL      DATA    0E9H
+  00C5                46     IAP_CMD DATA    0C5H
+  00FA                47     CCAP0H  DATA    0FAH
+  00FB                48     CCAP1H  DATA    0FBH
+  00E4                49     DPL1    DATA    0E4H
+  00FC                50     CCAP2H  DATA    0FCH
+  00BD                51     ADC_RES DATA    0BDH
+  00B6                52     IP2H    DATA    0B6H
+  00EE                53     IP3H    DATA    0EEH
+  00EA                54     CCAP0L  DATA    0EAH
+  00DE                55     CR      BIT     0D8H.6
+  00AE                56     TA      DATA    0AEH
+  00EB                57     CCAP1L  DATA    0EBH
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE     2
+
+  00DA                58     CCAPM0  DATA    0DAH
+  00EC                59     CCAP2L  DATA    0ECH
+  00DB                60     CCAPM1  DATA    0DBH
+  008F                61     INTCLKO DATA    08FH
+  00DC                62     CCAPM2  DATA    0DCH
+  00AC                63     ES      BIT     0A8H.4
+  00BD                64     PADC    BIT     0B8H.5
+  00B8                65     IP      DATA    0B8H
+  00DE                66     ADCCFG  DATA    0DEH
+  0098                67     RI      BIT     098H.0
+  00D7                68     CY      BIT     0D0H.7
+  0099                69     TI      BIT     098H.1
+  00C3                70     IAP_ADDRH       DATA    0C3H
+  00BC                71     PS      BIT     0B8H.4
+  0081                72     SP      DATA    081H
+  00D9                73     CMOD    DATA    0D9H
+  00D8                74     CCON    DATA    0D8H
+  00C4                75     IAP_ADDRL       DATA    0C4H
+  00D2                76     OV      BIT     0D0H.2
+  00BF                77     PPCA    BIT     0B8H.7
+  009E                78     LIRTRIM DATA    09EH
+  00F6                79     PWMCFG01        DATA    0F6H
+  00E6                80     CMPCR1  DATA    0E6H
+  00E7                81     CMPCR2  DATA    0E7H
+  00F7                82     PWMCFG23        DATA    0F7H
+  00AE                83     ELVD    BIT     0A8H.6
+  00FE                84     PWMCFG45        DATA    0FEH
+  0080                85     P00     BIT     080H.0
+  00BC                86     ADC_CONTR       DATA    0BCH
+  0099                87     SBUF    DATA    099H
+  0090                88     P10     BIT     090H.0
+  0087                89     PCON    DATA    087H
+  0081                90     P01     BIT     080H.1
+  00A0                91     P20     BIT     0A0H.0
+  0091                92     P11     BIT     090H.1
+  0082                93     P02     BIT     080H.2
+  00F5                94     IAP_TPS DATA    0F5H
+  00B0                95     P30     BIT     0B0H.0
+  00A1                96     P21     BIT     0A0H.1
+  0092                97     P12     BIT     090H.2
+  0083                98     P03     BIT     080H.3
+  00C0                99     P40     BIT     0C0H.0
+  00B1               100     P31     BIT     0B0H.1
+  00A2               101     P22     BIT     0A0H.2
+  0098               102     SCON    DATA    098H
+  0093               103     P13     BIT     090H.3
+  0084               104     P04     BIT     080H.4
+  00C8               105     P50     BIT     0C8H.0
+  00C1               106     P41     BIT     0C0H.1
+  00B2               107     P32     BIT     0B0H.2
+  00A3               108     P23     BIT     0A0H.3
+  0094               109     P14     BIT     090H.4
+  0089               110     TMOD    DATA    089H
+  0088               111     TCON    DATA    088H
+  0085               112     P05     BIT     080H.5
+  00E8               113     P60     BIT     0E8H.0
+  00C9               114     P51     BIT     0C8H.1
+  00C2               115     P42     BIT     0C0H.2
+  00B3               116     P33     BIT     0B0H.3
+  00A4               117     P24     BIT     0A0H.4
+  0095               118     P15     BIT     090H.5
+  0086               119     P06     BIT     080H.6
+  00F8               120     P70     BIT     0F8H.0
+  00E9               121     P61     BIT     0E8H.1
+  00CA               122     P52     BIT     0C8H.2
+  00C3               123     P43     BIT     0C0H.3
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE     3
+
+  00BE               124     PLVD    BIT     0B8H.6
+  00B4               125     P34     BIT     0B0H.4
+  00A5               126     P25     BIT     0A0H.5
+  0096               127     P16     BIT     090H.6
+  0087               128     P07     BIT     080H.7
+  00F9               129     P71     BIT     0F8H.1
+  00EA               130     P62     BIT     0E8H.2
+  00CB               131     P53     BIT     0C8H.3
+  00C4               132     P44     BIT     0C0H.4
+  00B5               133     P35     BIT     0B0H.5
+  00A6               134     P26     BIT     0A0H.6
+  0097               135     P17     BIT     090H.7
+  00FA               136     P72     BIT     0F8H.2
+  00EB               137     P63     BIT     0E8H.3
+  00CC               138     P54     BIT     0C8H.4
+  00C5               139     P45     BIT     0C0H.5
+  00B6               140     P36     BIT     0B0H.6
+  00A7               141     P27     BIT     0A0H.7
+  00FB               142     P73     BIT     0F8H.3
+  00EC               143     P64     BIT     0E8H.4
+  00CD               144     P55     BIT     0C8H.5
+  00C6               145     P46     BIT     0C0H.6
+  00B7               146     P37     BIT     0B0H.7
+  00FC               147     P74     BIT     0F8H.4
+  00ED               148     P65     BIT     0E8H.5
+  00CE               149     P56     BIT     0C8H.6
+  00C7               150     P47     BIT     0C0H.7
+  00FD               151     P75     BIT     0F8H.5
+  00EE               152     P66     BIT     0E8H.6
+  00CF               153     P57     BIT     0C8H.7
+  00FE               154     P76     BIT     0F8H.6
+  00EF               155     P67     BIT     0E8H.7
+  00FF               156     P77     BIT     0F8H.7
+  0089               157     IE0     BIT     088H.1
+  008B               158     IE1     BIT     088H.3
+  00AF               159     IE2     DATA    0AFH
+  00F0               160     B       DATA    0F0H
+  008E               161     AUXR    DATA    08EH
+  00C7               162     IAP_CONTR       DATA    0C7H
+  00E0               163     ACC     DATA    0E0H
+  00A9               164     ET0     BIT     0A8H.1
+  00AB               165     ET1     BIT     0A8H.3
+  008D               166     TF0     BIT     088H.5
+  00FF               167     RSTCFG  DATA    0FFH
+  00B5               168     IP2     DATA    0B5H
+  008F               169     TF1     BIT     088H.7
+  00DF               170     IP3     DATA    0DFH
+  009A               171     RB8     BIT     098H.2
+  008C               172     TH0     DATA    08CH
+  00A8               173     EX0     BIT     0A8H.0
+  008D               174     TH1     DATA    08DH
+  0088               175     IT0     BIT     088H.0
+  00D6               176     T2H     DATA    0D6H
+  00AA               177     EX1     BIT     0A8H.2
+  009B               178     TB8     BIT     098H.3
+  008A               179     IT1     BIT     088H.2
+  00D4               180     T3H     DATA    0D4H
+  00D0               181     P       BIT     0D0H.0
+  00D2               182     T4H     DATA    0D2H
+  009F               183     SM0     BIT     098H.7
+  008A               184     TL0     DATA    08AH
+  009E               185     SM1     BIT     098H.6
+  008B               186     TL1     DATA    08BH
+  00D7               187     T2L     DATA    0D7H
+  009D               188     SM2     BIT     098H.5
+  00D5               189     T3L     DATA    0D5H
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE     4
+
+  00D3               190     T4L     DATA    0D3H
+  00B9               191     PT0     BIT     0B8H.1
+  00D3               192     RS0     BIT     0D0H.3
+  00BB               193     PT1     BIT     0B8H.3
+  00D4               194     RS1     BIT     0D0H.4
+  00C2               195     IAP_DATA        DATA    0C2H
+  008C               196     TR0     BIT     088H.4
+  008E               197     TR1     BIT     088H.6
+  00C1               198     WDT_CONTR       DATA    0C1H
+  00B8               199     PX0     BIT     0B8H.0
+  00BA               200     PX1     BIT     0B8H.2
+  009F               201     IRTRIM  DATA    09FH
+  00F2               202     PCA_PWM0        DATA    0F2H
+  00F3               203     PCA_PWM1        DATA    0F3H
+  00F4               204     PCA_PWM2        DATA    0F4H
+  0083               205     DPH     DATA    083H
+  00D1               206     T4T3M   DATA    0D1H
+  00BE               207     ADC_RESL        DATA    0BEH
+  0082               208     DPL     DATA    082H
+  00CD               209     SPSTAT  DATA    0CDH
+  00B7               210     IPH     DATA    0B7H
+  00F1               211     PWMSET  DATA    0F1H
+  009B               212     S2BUF   DATA    09BH
+  00AD               213     S3BUF   DATA    0ADH
+  009C               214     REN     BIT     098H.4
+  0085               215     S4BUF   DATA    085H
+  009A               216     S2CON   DATA    09AH
+  00E3               217     DPS     DATA    0E3H
+  00AC               218     S3CON   DATA    0ACH
+  0084               219     S4CON   DATA    084H
+  00EF               220     AUXINTIF        DATA    0EFH
+  00B9               221     SADEN   DATA    0B9H
+  00A9               222     SADDR   DATA    0A9H
+  00C6               223     IAP_TRIG        DATA    0C6H
+  00D5               224     F0      BIT     0D0H.5
+  009D               225     IRCBAND DATA    09DH
+  00D1               226     F1      BIT     0D0H.1
+  00D0               227     PSW     DATA    0D0H
+  00D8               228     CCF0    BIT     0D8H.0
+  00D9               229     CCF1    BIT     0D8H.1
+  00CF               230     SPDAT   DATA    0CFH
+  0094               231     P0M0    DATA    094H
+                     232     ?PR?PCA_Routine?MAIN SEGMENT CODE 
+                     233     ?PR?TM0_Isr?MAIN     SEGMENT CODE 
+                     234     ?PR?Uart2ReceiveStr?MAIN                 SEGMENT CODE 
+                     235     ?PR?Uart2Isr?MAIN    SEGMENT CODE 
+                     236     ?PR?Uart2Init?MAIN   SEGMENT CODE 
+                     237     ?PR?_Uart2Send?MAIN  SEGMENT CODE 
+                     238     ?PR?_?Uart2SendStr?MAIN                  SEGMENT CODE 
+                     239     ?PR?PCAInit?MAIN     SEGMENT CODE 
+                     240     ?PR?TIM0_Init?MAIN   SEGMENT CODE 
+                     241     ?PR?_WritePwmValue?MAIN                  SEGMENT CODE 
+                     242     ?PR?SetMeterWithSpeed?MAIN               SEGMENT CODE 
+                     243     ?PR?runUARTCommand?MAIN                  SEGMENT CODE 
+                     244     ?PR?main?MAIN        SEGMENT CODE 
+                     245     ?DT?main?MAIN        SEGMENT DATA OVERLAYABLE 
+                     246     ?PR?Delay1000ms?MAIN SEGMENT CODE 
+                     247     ?PR?_getOutputMsg?MAIN                   SEGMENT CODE 
+                     248     ?DT?_getOutputMsg?MAIN                   SEGMENT DATA OVERLAYABLE 
+                     249     ?CO?MAIN             SEGMENT CODE 
+                     250     ?C_INITSEG           SEGMENT CODE 
+                     251     ?XD?MAIN             SEGMENT XDATA 
+                     252     ?BI?MAIN             SEGMENT BIT 
+                     253     ?DT?MAIN             SEGMENT DATA 
+                     254     ?XD?runUARTCommand?MAIN                  SEGMENT XDATA OVERLAYABLE 
+                     255             EXTRN   CODE (_sprintf)
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE     5
+
+                     256             EXTRN   DATA (?_sprintf?BYTE)
+                     257             EXTRN   CODE (_strcat)
+                     258             EXTRN   DATA (?_strcat?BYTE)
+                     259             EXTRN   CODE (_atof)
+                     260             EXTRN   CODE (_atoi)
+                     261             EXTRN   CODE (_strstr)
+                     262             EXTRN   DATA (?_strstr?BYTE)
+                     263             EXTRN   CODE (?C?MEMSET)
+                     264             EXTRN   CODE (?C?ILDIX)
+                     265             EXTRN   CODE (?C?CSTPTR)
+                     266             EXTRN   CODE (?C?CSTOPTR)
+                     267             EXTRN   DATA (?C_IBP)
+                     268             EXTRN   CODE (?C?CLDPTR)
+                     269             EXTRN   CODE (?C?STRCPY)
+                     270             EXTRN   CODE (?C?LSTXDATA)
+                     271             EXTRN   CODE (?C?FPADD)
+                     272             EXTRN   CODE (?C?FPSUB)
+                     273             EXTRN   CODE (?C_STARTUP)
+                     274             PUBLIC  cmdtype
+                     275             PUBLIC  pwmVal
+                     276             PUBLIC  uartStartMsg
+                     277             PUBLIC  shouldProcess
+                     278             PUBLIC  XCCAP2H
+                     279             PUBLIC  rxbuffer
+                     280             PUBLIC  receiveStrPtr
+                     281             PUBLIC  CMODVal
+                     282             PUBLIC  msg
+                     283             PUBLIC  busy
+                     284             PUBLIC  repeatMsg
+                     285             PUBLIC  receiveStr
+                     286             PUBLIC  speed
+                     287             PUBLIC  _getOutputMsg
+                     288             PUBLIC  Delay1000ms
+                     289             PUBLIC  main
+                     290             PUBLIC  runUARTCommand
+                     291             PUBLIC  SetMeterWithSpeed
+                     292             PUBLIC  _WritePwmValue
+                     293             PUBLIC  TIM0_Init
+                     294             PUBLIC  PCAInit
+                     295             PUBLIC  _?Uart2SendStr
+                     296             PUBLIC  _Uart2Send
+                     297             PUBLIC  Uart2Init
+                     298             PUBLIC  Uart2Isr
+                     299             PUBLIC  Uart2ReceiveStr
+                     300             PUBLIC  TM0_Isr
+                     301             PUBLIC  PCA_Routine
+                     302     
+----                 303             RSEG  ?DT?_getOutputMsg?MAIN
+0000                 304     ?_getOutputMsg?BYTE:
+0000                 305            msg?1449:   DS   3
+                     306     
+----                 307             RSEG  ?DT?main?MAIN
+0000                 308     ?main?BYTE:
+0000                 309              i?1245:   DS   2
+                     310     
+----                 311             RSEG  ?XD?MAIN
+0000                 312               speed:   DS   4
+0004                 313          receiveStr:   DS   64
+0044                 314           repeatMsg:   DS   32
+0064                 315                 msg:   DS   32
+0084                 316             CMODVal:   DS   2
+0086                 317       receiveStrPtr:   DS   3
+0089                 318            rxbuffer:   DS   1
+008A                 319             XCCAP2H:   DS   1
+008B                 320        uartStartMsg:   DS   23
+00A2                 321              pwmVal:   DS   2
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE     6
+
+                     322     
+----                 323             RSEG  ?BI?MAIN
+0000                 324                busy:   DBIT   1
+0001                 325       shouldProcess:   DBIT   1
+                     326     
+----                 327             RSEG  ?DT?MAIN
+0000                 328             cmdtype:   DS   1
+                     329     
+----                 330             RSEG  ?XD?runUARTCommand?MAIN
+0000                 331       speedPos?1142:   DS   3
+                     332     
+----                 333             RSEG  ?XD?runUARTCommand?MAIN
+0003                 334              p?1143:   DS   3
+                     335     
+----                 336             RSEG  ?XD?runUARTCommand?MAIN
+0006                 337       proc_str?1144:   DS   128
+                     338     
+----                 339             RSEG  ?CO?MAIN
+0000                 340     ?SC_0:
+0000 2F636D64        341             DB  '/' ,'c' ,'m' ,'d' ,'_' ,'i' ,'n' ,'v' ,'a' ,'l' 
+0004 5F696E76                
+0008 616C                    
+000A 69643B0D        342             DB  'i' ,'d' ,';' ,00DH,00AH,000H
+000E 0A00                    
+                     343     
+0010                 344     ?SC_16:
+0010 2F676574        345             DB  '/' ,'g' ,'e' ,'t' ,000H
+0014 00                      
+                     346     
+0015                 347     ?SC_21:
+0015 2F736574        348             DB  '/' ,'s' ,'e' ,'t' ,':' ,000H
+0019 3A00                    
+                     349     
+001B                 350     ?SC_27:
+001B 3A00            351             DB  ':' ,000H
+                     352     
+001D                 353     ?SC_29:
+001D 2F696E63        354             DB  '/' ,'i' ,'n' ,'c' ,':' ,000H
+0021 3A00                    
+                     355     
+0023                 356     ?SC_35:
+0023 2F646563        357             DB  '/' ,'d' ,'e' ,'c' ,':' ,000H
+0027 3A00                    
+                     358     
+0029                 359     ?SC_41:
+0029 2F6C6967        360             DB  '/' ,'l' ,'i' ,'g' ,'h' ,'t' ,'_' ,'o' ,'n' ,';' 
+002D 68745F6F                
+0031 6E3B                    
+0033 00              361             DB  000H
+                     362     
+0034                 363     ?SC_52:
+0034 2F6C6967        364             DB  '/' ,'l' ,'i' ,'g' ,'h' ,'t' ,'_' ,'o' ,'f' ,'f' 
+0038 68745F6F                
+003C 6666                    
+003E 3B00            365             DB  ';' ,000H
+                     366     
+0040                 367     ?SC_64:
+0040 2F6C6564        368             DB  '/' ,'l' ,'e' ,'d' ,'_' ,'o' ,'n' ,';' ,000H
+0044 5F6F6E3B                
+0048 00                      
+                     369     
+0049                 370     ?SC_73:
+0049 2F6C6564        371             DB  '/' ,'l' ,'e' ,'d' ,'_' ,'o' ,'f' ,'f' ,';' ,000H
+004D 5F6F6666                
+0051 3B00                    
+                     372     
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE     7
+
+0053                 373     ?SC_83:
+0053 2F50574D        374             DB  '/' ,'P' ,'W' ,'M' ,':' ,000H
+0057 3A00                    
+                     375     
+0059                 376     ?SC_89:
+0059 2F434D4F        377             DB  '/' ,'C' ,'M' ,'O' ,'D' ,':' ,000H
+005D 443A00                  
+                     378     
+0060                 379     ?SC_96:
+0060 2F737461        380             DB  '/' ,'s' ,'t' ,'a' ,'t' ,'u' ,'s' ,':' ,'s' ,'p' 
+0064 7475733A                
+0068 7370                    
+006A 6565643D        381             DB  'e' ,'e' ,'d' ,'=' ,'%' ,'.' ,'2' ,'f' ,',' ,'p' 
+006E 252E3266                
+0072 2C70                    
+0074 776D5661        382             DB  'w' ,'m' ,'V' ,'a' ,'l' ,'=' ,'%' ,'d' ,',' ,'C' 
+0078 6C3D2564                
+007C 2C43                    
+007E 4D4F443D        383             DB  'M' ,'O' ,'D' ,'=' ,'%' ,'#' ,'X' ,';' ,00DH,00AH
+0082 2523583B                
+0086 0D0A                    
+0088 00              384             DB  000H
+                     385     
+0089                 386     ?SC_137:
+0089 2F676574        387             DB  '/' ,'g' ,'e' ,'t' ,':' ,'s' ,'p' ,'e' ,'e' ,'d' 
+008D 3A737065                
+0091 6564                    
+0093 3D252E32        388             DB  '=' ,'%' ,'.' ,'2' ,'f' ,',' ,'p' ,'w' ,'m' ,'V' 
+0097 662C7077                
+009B 6D56                    
+009D 616C3D25        389             DB  'a' ,'l' ,'=' ,'%' ,'d' ,',' ,'C' ,'M' ,'O' ,'D' 
+00A1 642C434D                
+00A5 4F44                    
+00A7 3D252358        390             DB  '=' ,'%' ,'#' ,'X' ,';' ,00DH,00AH,000H
+00AB 3B0D0A00                
+                     391     
+                     392     
+----                 393             RSEG  ?C_INITSEG
+0000 57              394             DB      057H
+0001 0000     F      395             DW      uartStartMsg
+0003 2F383035        396             DB  '/' ,'8' ,'0' ,'5' ,'1' ,'M' ,'e' ,'t' ,'e' ,'r' 
+0007 314D6574                
+000B 6572                    
+000D 55415254        397             DB  'U' ,'A' ,'R' ,'T' ,'S' ,'t' ,'a' ,'r' ,'t' ,';' 
+0011 53746172                
+0015 743B                    
+0017 0D0A00          398             DB  00DH,00AH,000H
+                     399     
+                     400     
+001A 60              401             DB      060H
+001B 20              402             DB      020H
+001C 0000     F      403             DW      repeatMsg
+001E 00              404             DB      000H
+001F 00000000        405             DB  000H,000H,000H,000H,000H,000H,000H,000H,000H,000H
+0023 00000000                
+0027 0000                    
+0029 00000000        406             DB  000H,000H,000H,000H,000H,000H,000H,000H,000H,000H
+002D 00000000                
+0031 0000                    
+0033 00000000        407             DB  000H,000H,000H,000H,000H,000H,000H,000H,000H,000H
+0037 00000000                
+003B 0000                    
+003D 00              408             DB  000H
+                     409     
+                     410     
+003E 60              411             DB      060H
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE     8
+
+003F 20              412             DB      020H
+0040 0000     F      413             DW      msg
+0042 00              414             DB      000H
+0043 00000000        415             DB  000H,000H,000H,000H,000H,000H,000H,000H,000H,000H
+0047 00000000                
+004B 0000                    
+004D 00000000        416             DB  000H,000H,000H,000H,000H,000H,000H,000H,000H,000H
+0051 00000000                
+0055 0000                    
+0057 00000000        417             DB  000H,000H,000H,000H,000H,000H,000H,000H,000H,000H
+005B 00000000                
+005F 0000                    
+0061 00              418             DB  000H
+                     419     
+                     420     
+0062 43              421             DB      043H
+0063 0000     F      422             DW      receiveStrPtr
+0065 01              423             DB      001H
+0066 0000     F      424             DW      receiveStr + 0
+                     425     
+0068 C100     F      426             DB      0C1H, shouldProcess + 000H      ; bit-init
+                     427     
+006A 01              428             DB      001H
+006B 00       F      429             DB      cmdtype
+006C 01              430             DB      001H
+                     431     
+006D 44              432             DB      044H
+006E 0000     F      433             DW      speed
+0070 00000000        434             DB      000H,000H,000H,000H     ; 0.000000
+                     435     
+                     436     ; //Code by CacPixel
+                     437     ; //using STC8G1K08(TSSOP20)
+                     438     ; 
+                     439     ; #include "stc8g.h"
+                     440     ; #include "intrins.h"
+                     441     ; #include "main.h"
+                     442     ; #include "stdio.h"
+                     443     ; #include "stdlib.h"
+                     444     ; #include "string.h"
+                     445     ; 
+                     446     ; bit busy;
+                     447     ; char xdata rxbuffer;
+                     448     ; char xdata uartStartMsg[] = "/8051MeterUARTStart;\r\n";
+                     449     ; char xdata receiveStr[64];
+                     450     ; char xdata repeatMsg[32] = { 0 };
+                     451     ; char xdata msg[32] = { 0 };
+                     452     ; char* xdata receiveStrPtr = receiveStr;
+                     453     ; bit shouldProcess = 0;
+                     454     ; CommandTypeDef cmdtype = CMD_NULL;
+                     455     ; float xdata speed = 0;
+                     456     ; char xdata XCCAP2H;
+                     457     ; int xdata pwmVal;
+                     458     ; int xdata CMODVal;
+                     459     ; 
+                     460     ; 
+----                 461     CSEG    AT      0003BH
+003B 020000   F      462             LJMP    PCA_Routine
+                     463     
+                     464     ; void PCA_Routine(void) interrupt 7
+                     465     
+----                 466             RSEG  ?PR?PCA_Routine?MAIN
+                     467             USING   0
+0000                 468     PCA_Routine:
+                     469                             ; SOURCE LINE # 26
+                     470     ; {
+                     471     ;     CF = 0;
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE     9
+
+                     472                             ; SOURCE LINE # 28
+0000 C2DF            473             CLR     CF
+                     474     ; }
+                     475                             ; SOURCE LINE # 29
+0002 32              476             RETI    
+                     477     ; END OF PCA_Routine
+                     478     
+----                 479     CSEG    AT      0000BH
+000B 020000   F      480             LJMP    TM0_Isr
+                     481     
+                     482     ; 
+                     483     ; void TM0_Isr() interrupt 1
+                     484     
+----                 485             RSEG  ?PR?TM0_Isr?MAIN
+                     486             USING   0
+0000                 487     TM0_Isr:
+0000 C0E0            488             PUSH    ACC
+0002 C0F0            489             PUSH    B
+0004 C083            490             PUSH    DPH
+0006 C082            491             PUSH    DPL
+0008 C0D0            492             PUSH    PSW
+000A 75D000          493             MOV     PSW,#00H
+000D C000            494             PUSH    AR0
+000F C001            495             PUSH    AR1
+0011 C002            496             PUSH    AR2
+0013 C003            497             PUSH    AR3
+0015 C004            498             PUSH    AR4
+0017 C005            499             PUSH    AR5
+0019 C006            500             PUSH    AR6
+001B C007            501             PUSH    AR7
+                     502             USING   0
+                     503                             ; SOURCE LINE # 31
+                     504     ; {
+                     505     ;     if (shouldProcess) {
+                     506                             ; SOURCE LINE # 33
+001D 30002C   F      507             JNB     shouldProcess,?C0004
+                     508     ;         // Uart2SendStr(receiveStr);
+                     509     ;         // Uart2SendStr("\r\n");
+                     510     ; 
+                     511     ; 
+                     512     ;         cmdtype = runUARTCommand();
+                     513                             ; SOURCE LINE # 38
+0020 120000   F      514             LCALL   runUARTCommand
+0023 8F00     F      515             MOV     cmdtype,R7
+                     516     ;         if (cmdtype == CMD_INVALID) {
+                     517                             ; SOURCE LINE # 39
+0025 EF              518             MOV     A,R7
+0026 7022            519             JNZ     ?C0003
+                     520     ;             //command invalid
+                     521     ;             clearMsg(msg, sizeof(msg));
+                     522                             ; SOURCE LINE # 41
+0028 FE              523             MOV     R6,A
+0029 7F20            524             MOV     R7,#020H
+002B FD              525             MOV     R5,A
+002C 7B01            526             MOV     R3,#01H
+002E 7A00     F      527             MOV     R2,#HIGH (msg)
+0030 7900     F      528             MOV     R1,#LOW (msg)
+0032 120000   F      529             LCALL   ?C?MEMSET
+                     530     ;             strcat(msg, "/cmd_invalid;\r\n");
+                     531                             ; SOURCE LINE # 42
+0035 7500FF   F      532             MOV     ?_strcat?BYTE+03H,#0FFH
+0038 750000   F      533             MOV     ?_strcat?BYTE+04H,#HIGH (?SC_0)
+003B 750000   F      534             MOV     ?_strcat?BYTE+05H,#LOW (?SC_0)
+003E 7B01            535             MOV     R3,#01H
+0040 7A00     F      536             MOV     R2,#HIGH (msg)
+0042 7900     F      537             MOV     R1,#LOW (msg)
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    10
+
+0044 120000   F      538             LCALL   _strcat
+                     539     ;             Uart2SendStr(msg);
+                     540                             ; SOURCE LINE # 43
+0047 120000   F      541             LCALL   L?0081
+                     542     ;         }
+                     543                             ; SOURCE LINE # 44
+004A                 544     ?C0003:
+                     545     ;         shouldProcess = 0;
+                     546                             ; SOURCE LINE # 45
+004A C200     F      547             CLR     shouldProcess
+                     548     ; 
+                     549     ;     }
+                     550                             ; SOURCE LINE # 47
+                     551     ; 
+                     552     ; }
+                     553                             ; SOURCE LINE # 49
+004C                 554     ?C0004:
+004C D007            555             POP     AR7
+004E D006            556             POP     AR6
+0050 D005            557             POP     AR5
+0052 D004            558             POP     AR4
+0054 D003            559             POP     AR3
+0056 D002            560             POP     AR2
+0058 D001            561             POP     AR1
+005A D000            562             POP     AR0
+005C D0D0            563             POP     PSW
+005E D082            564             POP     DPL
+0060 D083            565             POP     DPH
+0062 D0F0            566             POP     B
+0064 D0E0            567             POP     ACC
+0066 32              568             RETI    
+                     569     ; END OF TM0_Isr
+                     570     
+                     571     ; 
+                     572     ; void Uart2ReceiveStr() {
+                     573     
+----                 574             RSEG  ?PR?Uart2ReceiveStr?MAIN
+0000                 575     Uart2ReceiveStr:
+                     576             USING   0
+                     577                             ; SOURCE LINE # 51
+                     578     ;     if (receiveStrPtr == receiveStr + sizeof(receiveStr) - sizeof(char)) {
+                     579                             ; SOURCE LINE # 52
+0000 900000   F      580             MOV     DPTR,#receiveStrPtr
+0003 E0              581             MOVX    A,@DPTR
+0004 FB              582             MOV     R3,A
+0005 A3              583             INC     DPTR
+0006 E0              584             MOVX    A,@DPTR
+0007 FA              585             MOV     R2,A
+0008 A3              586             INC     DPTR
+0009 E0              587             MOVX    A,@DPTR
+000A F9              588             MOV     R1,A
+000B 7401            589             MOV     A,#01H
+000D 900000   F      590             MOV     DPTR,#receiveStr+03FH
+0010 6B              591             XRL     A,R3
+0011 7008            592             JNZ     ?C0063
+0013 E9              593             MOV     A,R1
+0014 6582            594             XRL     A,DPL
+0016 7003            595             JNZ     ?C0063
+0018 EA              596             MOV     A,R2
+0019 6583            597             XRL     A,DPH
+001B                 598     ?C0063:
+001B 7013            599             JNZ     ?C0005
+                     600     ;         *receiveStrPtr++ = 0;
+                     601                             ; SOURCE LINE # 53
+001D 900000   F      602             MOV     DPTR,#receiveStrPtr
+0020 E0              603             MOVX    A,@DPTR
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    11
+
+0021 FB              604             MOV     R3,A
+0022 A3              605             INC     DPTR
+0023 E4              606             CLR     A
+0024 75F001          607             MOV     B,#01H
+0027 120000   F      608             LCALL   ?C?ILDIX
+002A A9F0            609             MOV     R1,B
+002C FA              610             MOV     R2,A
+002D E4              611             CLR     A
+                     612     ;     } else {
+                     613                             ; SOURCE LINE # 54
+002E 8016            614             SJMP    ?C0078
+0030                 615     ?C0005:
+                     616     ;         *receiveStrPtr++ = rxbuffer;
+                     617                             ; SOURCE LINE # 55
+0030 900000   F      618             MOV     DPTR,#rxbuffer
+0033 E0              619             MOVX    A,@DPTR
+0034 FF              620             MOV     R7,A
+0035 900000   F      621             MOV     DPTR,#receiveStrPtr
+0038 E0              622             MOVX    A,@DPTR
+0039 FB              623             MOV     R3,A
+003A A3              624             INC     DPTR
+003B E4              625             CLR     A
+003C 75F001          626             MOV     B,#01H
+003F 120000   F      627             LCALL   ?C?ILDIX
+0042 A9F0            628             MOV     R1,B
+0044 FA              629             MOV     R2,A
+0045 EF              630             MOV     A,R7
+0046                 631     ?C0078:
+0046 120000   F      632             LCALL   ?C?CSTPTR
+                     633     ;     }
+                     634                             ; SOURCE LINE # 56
+                     635     ;     return;
+                     636     ; }
+                     637                             ; SOURCE LINE # 58
+0049                 638     ?C0007:
+0049 22              639             RET     
+                     640     ; END OF Uart2ReceiveStr
+                     641     
+----                 642     CSEG    AT      00043H
+0043 020000   F      643             LJMP    Uart2Isr
+                     644     
+                     645     ; 
+                     646     ; void Uart2Isr() interrupt 8
+                     647     
+----                 648             RSEG  ?PR?Uart2Isr?MAIN
+                     649             USING   0
+0000                 650     Uart2Isr:
+0000 C0E0            651             PUSH    ACC
+0002 C0F0            652             PUSH    B
+0004 C083            653             PUSH    DPH
+0006 C082            654             PUSH    DPL
+0008 C0D0            655             PUSH    PSW
+000A 75D000          656             MOV     PSW,#00H
+000D C000            657             PUSH    AR0
+000F C001            658             PUSH    AR1
+0011 C002            659             PUSH    AR2
+0013 C003            660             PUSH    AR3
+0015 C007            661             PUSH    AR7
+                     662             USING   0
+                     663                             ; SOURCE LINE # 60
+                     664     ; {
+                     665     ;     //S2TI
+                     666     ;     if (S2CON & 0x02) {
+                     667                             ; SOURCE LINE # 63
+0017 E59A            668             MOV     A,S2CON
+0019 30E105          669             JNB     ACC.1,?C0008
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    12
+
+                     670     ;         S2CON &= ~0x02;
+                     671                             ; SOURCE LINE # 64
+001C 539AFD          672             ANL     S2CON,#0FDH
+                     673     ;         busy = 0;
+                     674                             ; SOURCE LINE # 65
+001F C200     F      675             CLR     busy
+                     676     ;     }
+                     677                             ; SOURCE LINE # 66
+0021                 678     ?C0008:
+                     679     ; 
+                     680     ;     //S2RI
+                     681     ;     if (S2CON & 0x01) {
+                     682                             ; SOURCE LINE # 69
+0021 E59A            683             MOV     A,S2CON
+0023 20E003          684             JB      ACC.0,$ + 6H
+0026 020000   F      685             LJMP    ?C0011
+                     686     ;         S2CON &= ~0x01;
+                     687                             ; SOURCE LINE # 70
+0029 539AFE          688             ANL     S2CON,#0FEH
+                     689     ;         rxbuffer = S2BUF;
+                     690                             ; SOURCE LINE # 71
+002C 900000   F      691             MOV     DPTR,#rxbuffer
+002F E59B            692             MOV     A,S2BUF
+0031 F0              693             MOVX    @DPTR,A
+                     694     ;         if (receiveStr == receiveStrPtr && rxbuffer != '/') {
+                     695                             ; SOURCE LINE # 72
+0032 900000   F      696             MOV     DPTR,#receiveStrPtr
+0035 E0              697             MOVX    A,@DPTR
+0036 FB              698             MOV     R3,A
+0037 A3              699             INC     DPTR
+0038 E0              700             MOVX    A,@DPTR
+0039 FA              701             MOV     R2,A
+003A A3              702             INC     DPTR
+003B E0              703             MOVX    A,@DPTR
+003C F9              704             MOV     R1,A
+003D 7401            705             MOV     A,#01H
+003F 900000   F      706             MOV     DPTR,#receiveStr
+0042 6B              707             XRL     A,R3
+0043 7008            708             JNZ     ?C0064
+0045 E9              709             MOV     A,R1
+0046 6582            710             XRL     A,DPL
+0048 7003            711             JNZ     ?C0064
+004A EA              712             MOV     A,R2
+004B 6583            713             XRL     A,DPH
+004D                 714     ?C0064:
+004D 700B            715             JNZ     ?C0010
+004F 900000   F      716             MOV     DPTR,#rxbuffer
+0052 E0              717             MOVX    A,@DPTR
+0053 642F            718             XRL     A,#02FH
+0055 6003            719             JZ      $ + 5H
+0057 020000   F      720             LJMP    ?C0011
+                     721     ; 
+                     722     ;             return;
+                     723     ;         }
+                     724                             ; SOURCE LINE # 75
+005A                 725     ?C0010:
+                     726     ; 
+                     727     ;         if (shouldProcess)
+                     728                             ; SOURCE LINE # 77
+005A 300003   F      729             JNB     shouldProcess,$ + 6H
+005D 020000   F      730             LJMP    ?C0011
+                     731     ;             return;
+                     732     ; 
+                     733     ;         if (rxbuffer == '/')
+                     734                             ; SOURCE LINE # 80
+0060 900000   F      735             MOV     DPTR,#rxbuffer
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    13
+
+0063 E0              736             MOVX    A,@DPTR
+0064 B42F03          737             CJNE    A,#02FH,?C0013
+                     738     ;             cmdtype = CMD_NULL;
+                     739                             ; SOURCE LINE # 81
+0067 750001   F      740             MOV     cmdtype,#01H
+006A                 741     ?C0013:
+                     742     ; 
+                     743     ;         Uart2ReceiveStr();
+                     744                             ; SOURCE LINE # 83
+006A 120000   F      745             LCALL   Uart2ReceiveStr
+                     746     ;         if (receiveStrPtr == receiveStr + sizeof(receiveStr) || rxbuffer == ';') {
+                     747                             ; SOURCE LINE # 84
+006D 900000   F      748             MOV     DPTR,#receiveStrPtr
+0070 E0              749             MOVX    A,@DPTR
+0071 FB              750             MOV     R3,A
+0072 A3              751             INC     DPTR
+0073 E0              752             MOVX    A,@DPTR
+0074 FA              753             MOV     R2,A
+0075 A3              754             INC     DPTR
+0076 E0              755             MOVX    A,@DPTR
+0077 F9              756             MOV     R1,A
+0078 7401            757             MOV     A,#01H
+007A 900000   F      758             MOV     DPTR,#receiveStr+040H
+007D 6B              759             XRL     A,R3
+007E 7008            760             JNZ     ?C0065
+0080 E9              761             MOV     A,R1
+0081 6582            762             XRL     A,DPL
+0083 7003            763             JNZ     ?C0065
+0085 EA              764             MOV     A,R2
+0086 6583            765             XRL     A,DPH
+0088                 766     ?C0065:
+0088 6007            767             JZ      ?C0015
+008A 900000   F      768             MOV     DPTR,#rxbuffer
+008D E0              769             MOVX    A,@DPTR
+008E B43B4E          770             CJNE    A,#03BH,?C0011
+0091                 771     ?C0015:
+                     772     ; 
+                     773     ;             if (receiveStrPtr != receiveStr + sizeof(receiveStr))
+                     774                             ; SOURCE LINE # 86
+0091 900000   F      775             MOV     DPTR,#receiveStrPtr
+0094 E0              776             MOVX    A,@DPTR
+0095 FB              777             MOV     R3,A
+0096 A3              778             INC     DPTR
+0097 E0              779             MOVX    A,@DPTR
+0098 FA              780             MOV     R2,A
+0099 A3              781             INC     DPTR
+009A E0              782             MOVX    A,@DPTR
+009B F9              783             MOV     R1,A
+009C 7401            784             MOV     A,#01H
+009E 900000   F      785             MOV     DPTR,#receiveStr+040H
+00A1 6B              786             XRL     A,R3
+00A2 7008            787             JNZ     ?C0066
+00A4 E9              788             MOV     A,R1
+00A5 6582            789             XRL     A,DPL
+00A7 7003            790             JNZ     ?C0066
+00A9 EA              791             MOV     A,R2
+00AA 6583            792             XRL     A,DPH
+00AC                 793     ?C0066:
+00AC 900000   F      794             MOV     DPTR,#receiveStrPtr
+00AF 600E            795             JZ      ?C0016
+                     796     ;                 *receiveStrPtr = 0;
+                     797                             ; SOURCE LINE # 87
+00B1 E0              798             MOVX    A,@DPTR
+00B2 FB              799             MOV     R3,A
+00B3 A3              800             INC     DPTR
+00B4 E0              801             MOVX    A,@DPTR
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    14
+
+00B5 FA              802             MOV     R2,A
+00B6 A3              803             INC     DPTR
+00B7 E0              804             MOVX    A,@DPTR
+00B8 F9              805             MOV     R1,A
+00B9 E4              806             CLR     A
+00BA 120000   F      807             LCALL   ?C?CSTPTR
+00BD 8010            808             SJMP    ?C0017
+00BF                 809     ?C0016:
+                     810     ;             else {
+                     811                             ; SOURCE LINE # 88
+                     812     ;                 *(receiveStrPtr - 2 * sizeof(char)) = ';';
+                     813                             ; SOURCE LINE # 89
+00BF E0              814             MOVX    A,@DPTR
+00C0 FB              815             MOV     R3,A
+00C1 A3              816             INC     DPTR
+00C2 E0              817             MOVX    A,@DPTR
+00C3 FA              818             MOV     R2,A
+00C4 A3              819             INC     DPTR
+00C5 E0              820             MOVX    A,@DPTR
+00C6 F9              821             MOV     R1,A
+00C7 90FFFE          822             MOV     DPTR,#0FFFEH
+00CA 743B            823             MOV     A,#03BH
+00CC 120000   F      824             LCALL   ?C?CSTOPTR
+                     825     ;             }
+                     826                             ; SOURCE LINE # 90
+00CF                 827     ?C0017:
+                     828     ; 
+                     829     ; 
+                     830     ;             receiveStrPtr = receiveStr;
+                     831                             ; SOURCE LINE # 93
+00CF 900000   F      832             MOV     DPTR,#receiveStrPtr
+00D2 7401            833             MOV     A,#01H
+00D4 F0              834             MOVX    @DPTR,A
+00D5 A3              835             INC     DPTR
+00D6 7400     F      836             MOV     A,#HIGH (receiveStr)
+00D8 F0              837             MOVX    @DPTR,A
+00D9 A3              838             INC     DPTR
+00DA 7400     F      839             MOV     A,#LOW (receiveStr)
+00DC F0              840             MOVX    @DPTR,A
+                     841     ;             shouldProcess = 1;
+                     842                             ; SOURCE LINE # 94
+00DD D200     F      843             SETB    shouldProcess
+                     844     ; 
+                     845     ;         }
+                     846                             ; SOURCE LINE # 96
+                     847     ;     }
+                     848                             ; SOURCE LINE # 97
+                     849     ; }
+                     850                             ; SOURCE LINE # 98
+00DF                 851     ?C0011:
+00DF D007            852             POP     AR7
+00E1 D003            853             POP     AR3
+00E3 D002            854             POP     AR2
+00E5 D001            855             POP     AR1
+00E7 D000            856             POP     AR0
+00E9 D0D0            857             POP     PSW
+00EB D082            858             POP     DPL
+00ED D083            859             POP     DPH
+00EF D0F0            860             POP     B
+00F1 D0E0            861             POP     ACC
+00F3 32              862             RETI    
+                     863     ; END OF Uart2Isr
+                     864     
+                     865     ; 
+                     866     ; void Uart2Init() {
+                     867     
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    15
+
+----                 868             RSEG  ?PR?Uart2Init?MAIN
+0000                 869     Uart2Init:
+                     870                             ; SOURCE LINE # 100
+                     871     ;     S2CON = 0x10;
+                     872                             ; SOURCE LINE # 101
+0000 759A10          873             MOV     S2CON,#010H
+                     874     ;     T2L = BRT;
+                     875                             ; SOURCE LINE # 102
+0003 75D7E8          876             MOV     T2L,#0E8H
+                     877     ;     T2H = BRT >> 8;
+                     878                             ; SOURCE LINE # 103
+0006 75D6FF          879             MOV     T2H,#0FFH
+                     880     ;     AUXR = 0x14;
+                     881                             ; SOURCE LINE # 104
+0009 758E14          882             MOV     AUXR,#014H
+                     883     ;     busy = 0;
+                     884                             ; SOURCE LINE # 105
+000C C200     F      885             CLR     busy
+                     886     ; }
+                     887                             ; SOURCE LINE # 106
+000E 22              888             RET     
+                     889     ; END OF Uart2Init
+                     890     
+                     891     ; 
+                     892     ; void Uart2Send(char dat) {
+                     893     
+----                 894             RSEG  ?PR?_Uart2Send?MAIN
+0000                 895     _Uart2Send:
+                     896                             ; SOURCE LINE # 108
+                     897     ;---- Variable 'dat?540' assigned to Register 'R7' ----
+0000                 898     ?C0019:
+                     899     ;     while (busy);
+                     900                             ; SOURCE LINE # 109
+0000 2000FD   F      901             JB      busy,?C0019
+                     902     ;     busy = 1;
+                     903                             ; SOURCE LINE # 110
+0003 D200     F      904             SETB    busy
+                     905     ;     S2BUF = dat;
+                     906                             ; SOURCE LINE # 111
+0005 8F9B            907             MOV     S2BUF,R7
+                     908     ; }
+                     909                             ; SOURCE LINE # 112
+0007 22              910             RET     
+                     911     ; END OF _Uart2Send
+                     912     
+                     913     ; 
+                     914     ; void Uart2SendStr(char* p) reentrant {
+                     915     
+----                 916             RSEG  ?PR?_?Uart2SendStr?MAIN
+0000                 917     L?0081:
+                     918             USING   0
+0000 7B01            919             MOV     R3,#01H
+0002 7A00     F      920             MOV     R2,#HIGH (msg)
+0004 7900     F      921             MOV     R1,#LOW (msg)
+0006                 922     _?Uart2SendStr:
+                     923             USING   0
+                     924                             ; SOURCE LINE # 114
+0006 1500     F      925             DEC     ?C_IBP
+0008 1500     F      926             DEC     ?C_IBP
+000A 1500     F      927             DEC     ?C_IBP
+000C A800     F      928             MOV     R0,?C_IBP
+000E A603            929             MOV     @R0,AR3
+0010 08              930             INC     R0
+0011 A602            931             MOV     @R0,AR2
+0013 08              932             INC     R0
+0014 A601            933             MOV     @R0,AR1
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    16
+
+0016                 934     ?C0022:
+                     935     ;     while (*p) {
+                     936                             ; SOURCE LINE # 115
+0016 A800     F      937             MOV     R0,?C_IBP
+0018 8603            938             MOV     AR3,@R0
+001A 08              939             INC     R0
+001B E6              940             MOV     A,@R0
+001C FA              941             MOV     R2,A
+001D 08              942             INC     R0
+001E E6              943             MOV     A,@R0
+001F F9              944             MOV     R1,A
+0020 120000   F      945             LCALL   ?C?CLDPTR
+0023 6019            946             JZ      ?C0024
+                     947     ;         Uart2Send(*p++);
+                     948                             ; SOURCE LINE # 116
+0025 A800     F      949             MOV     R0,?C_IBP
+0027 8603            950             MOV     AR3,@R0
+0029 08              951             INC     R0
+002A 08              952             INC     R0
+002B 06              953             INC     @R0
+002C E6              954             MOV     A,@R0
+002D 18              955             DEC     R0
+002E 8602            956             MOV     AR2,@R0
+0030 7001            957             JNZ     ?C0067
+0032 06              958             INC     @R0
+0033                 959     ?C0067:
+0033 14              960             DEC     A
+0034 F9              961             MOV     R1,A
+0035 120000   F      962             LCALL   ?C?CLDPTR
+0038 FF              963             MOV     R7,A
+0039 120000   F      964             LCALL   _Uart2Send
+                     965     ;     }
+                     966                             ; SOURCE LINE # 117
+003C 80D8            967             SJMP    ?C0022
+                     968     ; }
+                     969                             ; SOURCE LINE # 118
+003E                 970     ?C0024:
+003E 0500     F      971             INC     ?C_IBP
+0040 0500     F      972             INC     ?C_IBP
+0042 0500     F      973             INC     ?C_IBP
+0044 22              974             RET     
+                     975     ; END OF _?Uart2SendStr
+                     976     
+                     977     ; 
+                     978     ; void PCAInit() {
+                     979     
+----                 980             RSEG  ?PR?PCAInit?MAIN
+0000                 981     PCAInit:
+                     982                             ; SOURCE LINE # 120
+                     983     ;     CCON = 0x00;
+                     984                             ; SOURCE LINE # 121
+0000 E4              985             CLR     A
+0001 F5D8            986             MOV     CCON,A
+                     987     ;     CMOD = 0x0e;                                //PCA ±÷”Œ™œµÕ≥ ±÷”/8
+                     988                             ; SOURCE LINE # 122
+0003 75D90E          989             MOV     CMOD,#0EH
+                     990     ;     CL = 0x00;
+                     991                             ; SOURCE LINE # 123
+0006 F5E9            992             MOV     CL,A
+                     993     ;     CH = 0x00;
+                     994                             ; SOURCE LINE # 124
+0008 F5F9            995             MOV     CH,A
+                     996     ; 
+                     997     ;     P_SW1 |= 1 << 5;        //–ﬁ∏ƒPCA“Ω≈
+                     998                             ; SOURCE LINE # 126
+000A 43A220          999             ORL     P_SW1,#020H
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    17
+
+                    1000     ;     CCAPM2 = 0x42;                              //PCAƒ£øÈ2Œ™PWMπ§◊˜ƒ£ Ω
+                    1001                             ; SOURCE LINE # 127
+000D 75DC42         1002             MOV     CCAPM2,#042H
+                    1003     ;     PCA_PWM2 = 0xc0;                            //PCAƒ£øÈ2 ‰≥ˆ10ŒªPWM
+                    1004                             ; SOURCE LINE # 128
+0010 75F4C0         1005             MOV     PCA_PWM2,#0C0H
+                    1006     ;     CCAP2L = 0xc8;                              //PWM’ºø’±»Œ™96.875%[(400H-20H)/400H]
+                    1007                             ; SOURCE LINE # 129
+0013 75ECC8         1008             MOV     CCAP2L,#0C8H
+                    1009     ;     CCAP2H = 0xc8;
+                    1010                             ; SOURCE LINE # 130
+0016 75FCC8         1011             MOV     CCAP2H,#0C8H
+                    1012     ;     CR = 1;                                     //∆Ù∂ØPCAº∆ ±∆˜
+                    1013                             ; SOURCE LINE # 131
+0019 D2DE           1014             SETB    CR
+                    1015     ; 
+                    1016     ; 
+                    1017     ; }
+                    1018                             ; SOURCE LINE # 134
+001B 22             1019             RET     
+                    1020     ; END OF PCAInit
+                    1021     
+                    1022     ; 
+                    1023     ; void TIM0_Init() {
+                    1024     
+----                1025             RSEG  ?PR?TIM0_Init?MAIN
+0000                1026     TIM0_Init:
+                    1027                             ; SOURCE LINE # 136
+                    1028     ;     AUXR &= 0x7F;                     //∂® ±∆˜ ±÷”12Tƒ£ Ω
+                    1029                             ; SOURCE LINE # 137
+0000 538E7F         1030             ANL     AUXR,#07FH
+                    1031     ;     TMOD &= 0xF0;                     //…Ë÷√∂® ±∆˜ƒ£ Ω
+                    1032                             ; SOURCE LINE # 138
+0003 5389F0         1033             ANL     TMOD,#0F0H
+                    1034     ;     TL0 = 0x66;                               //…Ë÷√∂® ±≥ı º÷µ
+                    1035                             ; SOURCE LINE # 139
+0006 758A66         1036             MOV     TL0,#066H
+                    1037     ;     TH0 = 0xFC;                               //…Ë÷√∂® ±≥ı º÷µ
+                    1038                             ; SOURCE LINE # 140
+0009 758CFC         1039             MOV     TH0,#0FCH
+                    1040     ;     TF0 = 0;                          //«Â≥TF0±Í÷æ
+                    1041                             ; SOURCE LINE # 141
+000C C28D           1042             CLR     TF0
+                    1043     ;     TR0 = 1;                          //∂® ±∆˜0ø™ ºº∆ ±
+                    1044                             ; SOURCE LINE # 142
+000E D28C           1045             SETB    TR0
+                    1046     ;     ET0 = 1;                                    // πƒ‹∂® ±∆˜÷–∂œ
+                    1047                             ; SOURCE LINE # 143
+0010 D2A9           1048             SETB    ET0
+                    1049     ; }
+                    1050                             ; SOURCE LINE # 144
+0012 22             1051             RET     
+                    1052     ; END OF TIM0_Init
+                    1053     
+                    1054     ; 
+                    1055     ; void WritePwmValue(int val) {
+                    1056     
+----                1057             RSEG  ?PR?_WritePwmValue?MAIN
+0000                1058     _WritePwmValue:
+                    1059             USING   0
+                    1060                             ; SOURCE LINE # 146
+                    1061     ;---- Variable 'val?941' assigned to Register 'R4/R5' ----
+0000 AD07           1062             MOV     R5,AR7
+0002 AC06           1063             MOV     R4,AR6
+                    1064     ;     XCCAP2H = ((val & 0x0300) >> 8);
+                    1065                             ; SOURCE LINE # 147
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    18
+
+0004 EC             1066             MOV     A,R4
+0005 5403           1067             ANL     A,#03H
+0007 FF             1068             MOV     R7,A
+0008 900000   F     1069             MOV     DPTR,#XCCAP2H
+000B EF             1070             MOV     A,R7
+000C F0             1071             MOVX    @DPTR,A
+                    1072     ;     PCA_PWM2 = ((XCCAP2H << 4) | PCA_PWM2) & ((XCCAP2H << 4) | 0xcf);
+                    1073                             ; SOURCE LINE # 148
+000D E0             1074             MOVX    A,@DPTR
+000E C4             1075             SWAP    A
+000F 54F0           1076             ANL     A,#0F0H
+0011 FF             1077             MOV     R7,A
+0012 45F4           1078             ORL     A,PCA_PWM2
+0014 FE             1079             MOV     R6,A
+0015 EF             1080             MOV     A,R7
+0016 44CF           1081             ORL     A,#0CFH
+0018 5E             1082             ANL     A,R6
+0019 F5F4           1083             MOV     PCA_PWM2,A
+                    1084     ;     CCAP2H = (val & 0x00ff);
+                    1085                             ; SOURCE LINE # 149
+001B ED             1086             MOV     A,R5
+001C F5FC           1087             MOV     CCAP2H,A
+                    1088     ; 
+                    1089     ; }
+                    1090                             ; SOURCE LINE # 151
+001E 22             1091             RET     
+                    1092     ; END OF _WritePwmValue
+                    1093     
+                    1094     ; 
+                    1095     ; void SetMeterWithSpeed() {
+                    1096     
+----                1097             RSEG  ?PR?SetMeterWithSpeed?MAIN
+0000                1098     SetMeterWithSpeed:
+                    1099             USING   0
+                    1100                             ; SOURCE LINE # 153
+                    1101     ;     //..............
+                    1102     ;     WritePwmValue(pwmVal);
+                    1103                             ; SOURCE LINE # 155
+0000 900000   F     1104             MOV     DPTR,#pwmVal
+0003 E0             1105             MOVX    A,@DPTR
+0004 FE             1106             MOV     R6,A
+0005 A3             1107             INC     DPTR
+0006 E0             1108             MOVX    A,@DPTR
+0007 FF             1109             MOV     R7,A
+0008 020000   F     1110             LJMP    _WritePwmValue
+                    1111     ; END OF SetMeterWithSpeed
+                    1112     
+                    1113     ; }
+                    1114     ; 
+                    1115     ; CommandTypeDef runUARTCommand() {
+                    1116     
+----                1117             RSEG  ?PR?runUARTCommand?MAIN
+0000                1118     runUARTCommand:
+                    1119             USING   0
+                    1120                             ; SOURCE LINE # 158
+                    1121     ;     char* xdata speedPos;
+                    1122     ;     char* xdata p;
+                    1123     ;     int xdata proc_str[sizeof(receiveStr)];
+                    1124     ;     receiveStrPtr = receiveStr + 1;
+                    1125                             ; SOURCE LINE # 162
+0000 900000   F     1126             MOV     DPTR,#receiveStrPtr
+0003 7401           1127             MOV     A,#01H
+0005 F0             1128             MOVX    @DPTR,A
+0006 A3             1129             INC     DPTR
+0007 7400     F     1130             MOV     A,#HIGH (receiveStr+01H)
+0009 F0             1131             MOVX    @DPTR,A
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    19
+
+000A A3             1132             INC     DPTR
+000B 7400     F     1133             MOV     A,#LOW (receiveStr+01H)
+000D F0             1134             MOVX    @DPTR,A
+                    1135     ; 
+                    1136     ; 
+                    1137     ;     if (strstr((char*)receiveStr, "/get") != NULL) {
+                    1138                             ; SOURCE LINE # 165
+000E 7500FF   F     1139             MOV     ?_strstr?BYTE+03H,#0FFH
+0011 750000   F     1140             MOV     ?_strstr?BYTE+04H,#HIGH (?SC_16)
+0014 750000   F     1141             MOV     ?_strstr?BYTE+05H,#LOW (?SC_16)
+0017 7B01           1142             MOV     R3,#01H
+0019 7A00     F     1143             MOV     R2,#HIGH (receiveStr)
+001B 7900     F     1144             MOV     R1,#LOW (receiveStr)
+001D 120000   F     1145             LCALL   _strstr
+0020 E9             1146             MOV     A,R1
+0021 4A             1147             ORL     A,R2
+0022 4B             1148             ORL     A,R3
+0023 6012           1149             JZ      ?C0029
+                    1150     ;         cmdtype = CMD_GET;
+                    1151                             ; SOURCE LINE # 166
+0025 750002   F     1152             MOV     cmdtype,#02H
+                    1153     ; 
+                    1154     ; 
+                    1155     ;         getOutputMsg(msg);
+                    1156                             ; SOURCE LINE # 169
+0028 7B01           1157             MOV     R3,#01H
+002A 7A00     F     1158             MOV     R2,#HIGH (msg)
+002C 7900     F     1159             MOV     R1,#LOW (msg)
+002E 120000   F     1160             LCALL   _getOutputMsg
+                    1161     ; 
+                    1162     ;         /*
+                    1163     ;         sprintf((char*)msg, "/get:speed=%.2f,CCR=%lu,PSC=%lu,ARR=%lu;\r\n", \
+                    1164     ;              speed, TIM4->CCR1, TIM4->PSC, TIM4->ARR);
+                    1165     ;         */
+                    1166     ;         //HAL_UART_Transmit(huart, (uint8_t*)msg, strlen((char*)msg), 10);
+                    1167     ;         Uart2SendStr(msg);
+                    1168                             ; SOURCE LINE # 176
+0031 120000   F     1169             LCALL   L?0081
+                    1170     ; 
+                    1171     ; 
+                    1172     ;     } else if (strstr((char*)receiveStr, "/set:") != NULL) {
+                    1173                             ; SOURCE LINE # 179
+0034 020000   F     1174             LJMP    ?C0030
+0037                1175     ?C0029:
+0037 7500FF   F     1176             MOV     ?_strstr?BYTE+03H,#0FFH
+003A 750000   F     1177             MOV     ?_strstr?BYTE+04H,#HIGH (?SC_21)
+003D 750000   F     1178             MOV     ?_strstr?BYTE+05H,#LOW (?SC_21)
+0040 7B01           1179             MOV     R3,#01H
+0042 7A00     F     1180             MOV     R2,#HIGH (receiveStr)
+0044 7900     F     1181             MOV     R1,#LOW (receiveStr)
+0046 120000   F     1182             LCALL   _strstr
+0049 E9             1183             MOV     A,R1
+004A 4A             1184             ORL     A,R2
+004B 4B             1185             ORL     A,R3
+004C 6047           1186             JZ      ?C0031
+                    1187     ;         cmdtype = CMD_SET;
+                    1188                             ; SOURCE LINE # 180
+004E 750003   F     1189             MOV     cmdtype,#03H
+                    1190     ;         speedPos = strstr((char*)receiveStr, ":") + 1;
+                    1191                             ; SOURCE LINE # 181
+0051 7500FF   F     1192             MOV     ?_strstr?BYTE+03H,#0FFH
+0054 750000   F     1193             MOV     ?_strstr?BYTE+04H,#HIGH (?SC_27)
+0057 750000   F     1194             MOV     ?_strstr?BYTE+05H,#LOW (?SC_27)
+005A 7B01           1195             MOV     R3,#01H
+005C 7A00     F     1196             MOV     R2,#HIGH (receiveStr)
+005E 7900     F     1197             MOV     R1,#LOW (receiveStr)
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    20
+
+0060 120000   F     1198             LCALL   _strstr
+0063 E9             1199             MOV     A,R1
+0064 2401           1200             ADD     A,#01H
+0066 F9             1201             MOV     R1,A
+0067 E4             1202             CLR     A
+0068 3A             1203             ADDC    A,R2
+0069 FA             1204             MOV     R2,A
+006A 900000   F     1205             MOV     DPTR,#speedPos?1142
+006D EB             1206             MOV     A,R3
+006E F0             1207             MOVX    @DPTR,A
+006F A3             1208             INC     DPTR
+0070 EA             1209             MOV     A,R2
+0071 F0             1210             MOVX    @DPTR,A
+0072 A3             1211             INC     DPTR
+0073 E9             1212             MOV     A,R1
+0074 F0             1213             MOVX    @DPTR,A
+                    1214     ;         strcpy((char*)proc_str, speedPos);
+                    1215                             ; SOURCE LINE # 182
+0075 7800     F     1216             MOV     R0,#LOW (proc_str?1144)
+0077 7C00     F     1217             MOV     R4,#HIGH (proc_str?1144)
+0079 7D01           1218             MOV     R5,#01H
+007B 900000   F     1219             MOV     DPTR,#speedPos?1142
+007E E0             1220             MOVX    A,@DPTR
+007F FB             1221             MOV     R3,A
+0080 A3             1222             INC     DPTR
+0081 E0             1223             MOVX    A,@DPTR
+0082 FA             1224             MOV     R2,A
+0083 A3             1225             INC     DPTR
+0084 E0             1226             MOVX    A,@DPTR
+0085 F9             1227             MOV     R1,A
+0086 120000   F     1228             LCALL   ?C?STRCPY
+                    1229     ;         speed = (float)atof((char*)proc_str);
+                    1230                             ; SOURCE LINE # 183
+0089 7B01           1231             MOV     R3,#01H
+008B 7A00     F     1232             MOV     R2,#HIGH (proc_str?1144)
+008D 7900     F     1233             MOV     R1,#LOW (proc_str?1144)
+008F 120000   F     1234             LCALL   _atof
+                    1235     ;         SetMeterWithSpeed();
+                    1236                             ; SOURCE LINE # 184
+                    1237     ; 
+                    1238     ;         //sprintf((char*)msg, "/speed_set:%.2f;\r\n", speed);
+                    1239     ;         //HAL_UART_Transmit(huart, msg, strlen((char*)msg), 20);
+                    1240     ; 
+                    1241     ;     } else if (strstr((char*)receiveStr, "/inc:") != NULL) {
+                    1242                             ; SOURCE LINE # 189
+0092 020000   F     1243             LJMP    ?C0080
+0095                1244     ?C0031:
+0095 7500FF   F     1245             MOV     ?_strstr?BYTE+03H,#0FFH
+0098 750000   F     1246             MOV     ?_strstr?BYTE+04H,#HIGH (?SC_29)
+009B 750000   F     1247             MOV     ?_strstr?BYTE+05H,#LOW (?SC_29)
+009E 7B01           1248             MOV     R3,#01H
+00A0 7A00     F     1249             MOV     R2,#HIGH (receiveStr)
+00A2 7900     F     1250             MOV     R1,#LOW (receiveStr)
+00A4 120000   F     1251             LCALL   _strstr
+00A7 E9             1252             MOV     A,R1
+00A8 4A             1253             ORL     A,R2
+00A9 4B             1254             ORL     A,R3
+00AA 6068           1255             JZ      ?C0033
+                    1256     ;         cmdtype = CMD_INC;
+                    1257                             ; SOURCE LINE # 190
+00AC 750004   F     1258             MOV     cmdtype,#04H
+                    1259     ;         speedPos = strstr((char*)receiveStr, ":") + 1;
+                    1260                             ; SOURCE LINE # 191
+00AF 7500FF   F     1261             MOV     ?_strstr?BYTE+03H,#0FFH
+00B2 750000   F     1262             MOV     ?_strstr?BYTE+04H,#HIGH (?SC_27)
+00B5 750000   F     1263             MOV     ?_strstr?BYTE+05H,#LOW (?SC_27)
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    21
+
+00B8 7B01           1264             MOV     R3,#01H
+00BA 7A00     F     1265             MOV     R2,#HIGH (receiveStr)
+00BC 7900     F     1266             MOV     R1,#LOW (receiveStr)
+00BE 120000   F     1267             LCALL   _strstr
+00C1 E9             1268             MOV     A,R1
+00C2 2401           1269             ADD     A,#01H
+00C4 F9             1270             MOV     R1,A
+00C5 E4             1271             CLR     A
+00C6 3A             1272             ADDC    A,R2
+00C7 FA             1273             MOV     R2,A
+00C8 900000   F     1274             MOV     DPTR,#speedPos?1142
+00CB EB             1275             MOV     A,R3
+00CC F0             1276             MOVX    @DPTR,A
+00CD A3             1277             INC     DPTR
+00CE EA             1278             MOV     A,R2
+00CF F0             1279             MOVX    @DPTR,A
+00D0 A3             1280             INC     DPTR
+00D1 E9             1281             MOV     A,R1
+00D2 F0             1282             MOVX    @DPTR,A
+                    1283     ;         strcpy((char*)proc_str, speedPos);
+                    1284                             ; SOURCE LINE # 192
+00D3 7800     F     1285             MOV     R0,#LOW (proc_str?1144)
+00D5 7C00     F     1286             MOV     R4,#HIGH (proc_str?1144)
+00D7 7D01           1287             MOV     R5,#01H
+00D9 900000   F     1288             MOV     DPTR,#speedPos?1142
+00DC E0             1289             MOVX    A,@DPTR
+00DD FB             1290             MOV     R3,A
+00DE A3             1291             INC     DPTR
+00DF E0             1292             MOVX    A,@DPTR
+00E0 FA             1293             MOV     R2,A
+00E1 A3             1294             INC     DPTR
+00E2 E0             1295             MOVX    A,@DPTR
+00E3 F9             1296             MOV     R1,A
+00E4 120000   F     1297             LCALL   ?C?STRCPY
+                    1298     ;         speed += (float)atof((char*)proc_str);
+                    1299                             ; SOURCE LINE # 193
+00E7 900000   F     1300             MOV     DPTR,#speed
+00EA E0             1301             MOVX    A,@DPTR
+00EB F8             1302             MOV     R0,A
+00EC A3             1303             INC     DPTR
+00ED E0             1304             MOVX    A,@DPTR
+00EE F9             1305             MOV     R1,A
+00EF A3             1306             INC     DPTR
+00F0 E0             1307             MOVX    A,@DPTR
+00F1 FA             1308             MOV     R2,A
+00F2 A3             1309             INC     DPTR
+00F3 E0             1310             MOVX    A,@DPTR
+00F4 FB             1311             MOV     R3,A
+00F5 C000           1312             PUSH    AR0
+00F7 C001           1313             PUSH    AR1
+00F9 C002           1314             PUSH    AR2
+00FB C003           1315             PUSH    AR3
+00FD 7B01           1316             MOV     R3,#01H
+00FF 7A00     F     1317             MOV     R2,#HIGH (proc_str?1144)
+0101 7900     F     1318             MOV     R1,#LOW (proc_str?1144)
+0103 120000   F     1319             LCALL   _atof
+0106 D003           1320             POP     AR3
+0108 D002           1321             POP     AR2
+010A D001           1322             POP     AR1
+010C D000           1323             POP     AR0
+010E 120000   F     1324             LCALL   ?C?FPADD
+0111                1325     ?C0079:
+                    1326     ;         SetMeterWithSpeed();
+                    1327                             ; SOURCE LINE # 194
+                    1328     ;     } else if (strstr((char*)receiveStr, "/dec:") != NULL) {
+                    1329                             ; SOURCE LINE # 195
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    22
+
+0111 020000   F     1330             LJMP    ?C0080
+0114                1331     ?C0033:
+0114 7500FF   F     1332             MOV     ?_strstr?BYTE+03H,#0FFH
+0117 750000   F     1333             MOV     ?_strstr?BYTE+04H,#HIGH (?SC_35)
+011A 750000   F     1334             MOV     ?_strstr?BYTE+05H,#LOW (?SC_35)
+011D 7B01           1335             MOV     R3,#01H
+011F 7A00     F     1336             MOV     R2,#HIGH (receiveStr)
+0121 7900     F     1337             MOV     R1,#LOW (receiveStr)
+0123 120000   F     1338             LCALL   _strstr
+0126 E9             1339             MOV     A,R1
+0127 4A             1340             ORL     A,R2
+0128 4B             1341             ORL     A,R3
+0129 6079           1342             JZ      ?C0035
+                    1343     ;         cmdtype = CMD_DEC;
+                    1344                             ; SOURCE LINE # 196
+012B 750005   F     1345             MOV     cmdtype,#05H
+                    1346     ;         speedPos = strstr((char*)receiveStr, ":") + 1;
+                    1347                             ; SOURCE LINE # 197
+012E 7500FF   F     1348             MOV     ?_strstr?BYTE+03H,#0FFH
+0131 750000   F     1349             MOV     ?_strstr?BYTE+04H,#HIGH (?SC_27)
+0134 750000   F     1350             MOV     ?_strstr?BYTE+05H,#LOW (?SC_27)
+0137 7B01           1351             MOV     R3,#01H
+0139 7A00     F     1352             MOV     R2,#HIGH (receiveStr)
+013B 7900     F     1353             MOV     R1,#LOW (receiveStr)
+013D 120000   F     1354             LCALL   _strstr
+0140 E9             1355             MOV     A,R1
+0141 2401           1356             ADD     A,#01H
+0143 F9             1357             MOV     R1,A
+0144 E4             1358             CLR     A
+0145 3A             1359             ADDC    A,R2
+0146 FA             1360             MOV     R2,A
+0147 900000   F     1361             MOV     DPTR,#speedPos?1142
+014A EB             1362             MOV     A,R3
+014B F0             1363             MOVX    @DPTR,A
+014C A3             1364             INC     DPTR
+014D EA             1365             MOV     A,R2
+014E F0             1366             MOVX    @DPTR,A
+014F A3             1367             INC     DPTR
+0150 E9             1368             MOV     A,R1
+0151 F0             1369             MOVX    @DPTR,A
+                    1370     ;         strcpy((char*)proc_str, speedPos);
+                    1371                             ; SOURCE LINE # 198
+0152 7800     F     1372             MOV     R0,#LOW (proc_str?1144)
+0154 7C00     F     1373             MOV     R4,#HIGH (proc_str?1144)
+0156 7D01           1374             MOV     R5,#01H
+0158 900000   F     1375             MOV     DPTR,#speedPos?1142
+015B E0             1376             MOVX    A,@DPTR
+015C FB             1377             MOV     R3,A
+015D A3             1378             INC     DPTR
+015E E0             1379             MOVX    A,@DPTR
+015F FA             1380             MOV     R2,A
+0160 A3             1381             INC     DPTR
+0161 E0             1382             MOVX    A,@DPTR
+0162 F9             1383             MOV     R1,A
+0163 120000   F     1384             LCALL   ?C?STRCPY
+                    1385     ;         speed -= (float)atof((char*)proc_str);
+                    1386                             ; SOURCE LINE # 199
+0166 900000   F     1387             MOV     DPTR,#speed
+0169 E0             1388             MOVX    A,@DPTR
+016A FC             1389             MOV     R4,A
+016B A3             1390             INC     DPTR
+016C E0             1391             MOVX    A,@DPTR
+016D FD             1392             MOV     R5,A
+016E A3             1393             INC     DPTR
+016F E0             1394             MOVX    A,@DPTR
+0170 FE             1395             MOV     R6,A
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    23
+
+0171 A3             1396             INC     DPTR
+0172 E0             1397             MOVX    A,@DPTR
+0173 FF             1398             MOV     R7,A
+0174 C004           1399             PUSH    AR4
+0176 C005           1400             PUSH    AR5
+0178 C006           1401             PUSH    AR6
+017A C007           1402             PUSH    AR7
+017C 7B01           1403             MOV     R3,#01H
+017E 7A00     F     1404             MOV     R2,#HIGH (proc_str?1144)
+0180 7900     F     1405             MOV     R1,#LOW (proc_str?1144)
+0182 120000   F     1406             LCALL   _atof
+0185 A804           1407             MOV     R0,AR4
+0187 A905           1408             MOV     R1,AR5
+0189 AA06           1409             MOV     R2,AR6
+018B AB07           1410             MOV     R3,AR7
+018D D007           1411             POP     AR7
+018F D006           1412             POP     AR6
+0191 D005           1413             POP     AR5
+0193 D004           1414             POP     AR4
+0195 120000   F     1415             LCALL   ?C?FPSUB
+0198                1416     ?C0080:
+0198 900000   F     1417             MOV     DPTR,#speed
+019B 120000   F     1418             LCALL   ?C?LSTXDATA
+                    1419     ;         SetMeterWithSpeed();
+                    1420                             ; SOURCE LINE # 200
+019E 120000   F     1421             LCALL   SetMeterWithSpeed
+                    1422     ;     } else if (strstr((char*)receiveStr, "/light_on;") != NULL) {
+                    1423                             ; SOURCE LINE # 201
+01A1 020000   F     1424             LJMP    ?C0030
+01A4                1425     ?C0035:
+01A4 7500FF   F     1426             MOV     ?_strstr?BYTE+03H,#0FFH
+01A7 750000   F     1427             MOV     ?_strstr?BYTE+04H,#HIGH (?SC_41)
+01AA 750000   F     1428             MOV     ?_strstr?BYTE+05H,#LOW (?SC_41)
+01AD 7B01           1429             MOV     R3,#01H
+01AF 7A00     F     1430             MOV     R2,#HIGH (receiveStr)
+01B1 7900     F     1431             MOV     R1,#LOW (receiveStr)
+01B3 120000   F     1432             LCALL   _strstr
+01B6 E9             1433             MOV     A,R1
+01B7 4A             1434             ORL     A,R2
+01B8 4B             1435             ORL     A,R3
+01B9 6008           1436             JZ      ?C0037
+                    1437     ;         cmdtype = CMD_LIGHTON;
+                    1438                             ; SOURCE LINE # 202
+01BB 750006   F     1439             MOV     cmdtype,#06H
+                    1440     ;         LIGHT_ON;
+                    1441                             ; SOURCE LINE # 203
+01BE C2B6           1442             CLR     P36
+                    1443     ;     } else if (strstr((char*)receiveStr, "/light_off;") != NULL) {
+                    1444                             ; SOURCE LINE # 204
+01C0 020000   F     1445             LJMP    ?C0030
+01C3                1446     ?C0037:
+01C3 7500FF   F     1447             MOV     ?_strstr?BYTE+03H,#0FFH
+01C6 750000   F     1448             MOV     ?_strstr?BYTE+04H,#HIGH (?SC_52)
+01C9 750000   F     1449             MOV     ?_strstr?BYTE+05H,#LOW (?SC_52)
+01CC 7B01           1450             MOV     R3,#01H
+01CE 7A00     F     1451             MOV     R2,#HIGH (receiveStr)
+01D0 7900     F     1452             MOV     R1,#LOW (receiveStr)
+01D2 120000   F     1453             LCALL   _strstr
+01D5 E9             1454             MOV     A,R1
+01D6 4A             1455             ORL     A,R2
+01D7 4B             1456             ORL     A,R3
+01D8 6008           1457             JZ      ?C0039
+                    1458     ;         cmdtype = CMD_LIGHTOFF;
+                    1459                             ; SOURCE LINE # 205
+01DA 750007   F     1460             MOV     cmdtype,#07H
+                    1461     ;         LIGHT_OFF;
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    24
+
+                    1462                             ; SOURCE LINE # 206
+01DD D2B6           1463             SETB    P36
+                    1464     ;     } else if (strstr((char*)receiveStr, "/led_on;") != NULL) {
+                    1465                             ; SOURCE LINE # 207
+01DF 020000   F     1466             LJMP    ?C0030
+01E2                1467     ?C0039:
+01E2 7500FF   F     1468             MOV     ?_strstr?BYTE+03H,#0FFH
+01E5 750000   F     1469             MOV     ?_strstr?BYTE+04H,#HIGH (?SC_64)
+01E8 750000   F     1470             MOV     ?_strstr?BYTE+05H,#LOW (?SC_64)
+01EB 7B01           1471             MOV     R3,#01H
+01ED 7A00     F     1472             MOV     R2,#HIGH (receiveStr)
+01EF 7900     F     1473             MOV     R1,#LOW (receiveStr)
+01F1 120000   F     1474             LCALL   _strstr
+01F4 E9             1475             MOV     A,R1
+01F5 4A             1476             ORL     A,R2
+01F6 4B             1477             ORL     A,R3
+01F7 6008           1478             JZ      ?C0041
+                    1479     ;         cmdtype = CMD_LEDON;
+                    1480                             ; SOURCE LINE # 208
+01F9 750008   F     1481             MOV     cmdtype,#08H
+                    1482     ;         LED_ON;
+                    1483                             ; SOURCE LINE # 209
+01FC D292           1484             SETB    P12
+                    1485     ;     } else if (strstr((char*)receiveStr, "/led_off;") != NULL) {
+                    1486                             ; SOURCE LINE # 210
+01FE 020000   F     1487             LJMP    ?C0030
+0201                1488     ?C0041:
+0201 7500FF   F     1489             MOV     ?_strstr?BYTE+03H,#0FFH
+0204 750000   F     1490             MOV     ?_strstr?BYTE+04H,#HIGH (?SC_73)
+0207 750000   F     1491             MOV     ?_strstr?BYTE+05H,#LOW (?SC_73)
+020A 7B01           1492             MOV     R3,#01H
+020C 7A00     F     1493             MOV     R2,#HIGH (receiveStr)
+020E 7900     F     1494             MOV     R1,#LOW (receiveStr)
+0210 120000   F     1495             LCALL   _strstr
+0213 E9             1496             MOV     A,R1
+0214 4A             1497             ORL     A,R2
+0215 4B             1498             ORL     A,R3
+0216 6008           1499             JZ      ?C0043
+                    1500     ;         cmdtype = CMD_LEDOFF;
+                    1501                             ; SOURCE LINE # 211
+0218 750009   F     1502             MOV     cmdtype,#09H
+                    1503     ;         LED_OFF;
+                    1504                             ; SOURCE LINE # 212
+021B C292           1505             CLR     P12
+                    1506     ;     } else if (strstr((char*)receiveStr, "/PWM:") != NULL) {
+                    1507                             ; SOURCE LINE # 213
+021D 020000   F     1508             LJMP    ?C0030
+0220                1509     ?C0043:
+0220 7500FF   F     1510             MOV     ?_strstr?BYTE+03H,#0FFH
+0223 750000   F     1511             MOV     ?_strstr?BYTE+04H,#HIGH (?SC_83)
+0226 750000   F     1512             MOV     ?_strstr?BYTE+05H,#LOW (?SC_83)
+0229 7B01           1513             MOV     R3,#01H
+022B 7A00     F     1514             MOV     R2,#HIGH (receiveStr)
+022D 7900     F     1515             MOV     R1,#LOW (receiveStr)
+022F 120000   F     1516             LCALL   _strstr
+0232 E9             1517             MOV     A,R1
+0233 4A             1518             ORL     A,R2
+0234 4B             1519             ORL     A,R3
+0235 6051           1520             JZ      ?C0045
+                    1521     ;         cmdtype = CMD_SET_PWM;
+                    1522                             ; SOURCE LINE # 214
+0237 75000A   F     1523             MOV     cmdtype,#0AH
+                    1524     ;         p = strstr((char*)receiveStr, ":") + 1;
+                    1525                             ; SOURCE LINE # 215
+023A 7500FF   F     1526             MOV     ?_strstr?BYTE+03H,#0FFH
+023D 750000   F     1527             MOV     ?_strstr?BYTE+04H,#HIGH (?SC_27)
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    25
+
+0240 750000   F     1528             MOV     ?_strstr?BYTE+05H,#LOW (?SC_27)
+0243 7B01           1529             MOV     R3,#01H
+0245 7A00     F     1530             MOV     R2,#HIGH (receiveStr)
+0247 7900     F     1531             MOV     R1,#LOW (receiveStr)
+0249 120000   F     1532             LCALL   _strstr
+024C E9             1533             MOV     A,R1
+024D 2401           1534             ADD     A,#01H
+024F F9             1535             MOV     R1,A
+0250 E4             1536             CLR     A
+0251 3A             1537             ADDC    A,R2
+0252 FA             1538             MOV     R2,A
+0253 900000   F     1539             MOV     DPTR,#p?1143
+0256 EB             1540             MOV     A,R3
+0257 F0             1541             MOVX    @DPTR,A
+0258 A3             1542             INC     DPTR
+0259 EA             1543             MOV     A,R2
+025A F0             1544             MOVX    @DPTR,A
+025B A3             1545             INC     DPTR
+025C E9             1546             MOV     A,R1
+025D F0             1547             MOVX    @DPTR,A
+                    1548     ;         strcpy((char*)proc_str, p);
+                    1549                             ; SOURCE LINE # 216
+025E 7800     F     1550             MOV     R0,#LOW (proc_str?1144)
+0260 7C00     F     1551             MOV     R4,#HIGH (proc_str?1144)
+0262 7D01           1552             MOV     R5,#01H
+0264 900000   F     1553             MOV     DPTR,#p?1143
+0267 E0             1554             MOVX    A,@DPTR
+0268 FB             1555             MOV     R3,A
+0269 A3             1556             INC     DPTR
+026A E0             1557             MOVX    A,@DPTR
+026B FA             1558             MOV     R2,A
+026C A3             1559             INC     DPTR
+026D E0             1560             MOVX    A,@DPTR
+026E F9             1561             MOV     R1,A
+026F 120000   F     1562             LCALL   ?C?STRCPY
+                    1563     ;         pwmVal = atoi((char*)proc_str);
+                    1564                             ; SOURCE LINE # 217
+0272 7B01           1565             MOV     R3,#01H
+0274 7A00     F     1566             MOV     R2,#HIGH (proc_str?1144)
+0276 7900     F     1567             MOV     R1,#LOW (proc_str?1144)
+0278 120000   F     1568             LCALL   _atoi
+027B 900000   F     1569             MOV     DPTR,#pwmVal
+027E EE             1570             MOV     A,R6
+027F F0             1571             MOVX    @DPTR,A
+0280 A3             1572             INC     DPTR
+0281 EF             1573             MOV     A,R7
+0282 F0             1574             MOVX    @DPTR,A
+                    1575     ;         WritePwmValue(pwmVal);
+                    1576                             ; SOURCE LINE # 218
+0283 120000   F     1577             LCALL   _WritePwmValue
+                    1578     ;     } else if (strstr((char*)receiveStr, "/CMOD:") != NULL) {
+                    1579                             ; SOURCE LINE # 219
+0286 8062           1580             SJMP    ?C0030
+0288                1581     ?C0045:
+0288 7500FF   F     1582             MOV     ?_strstr?BYTE+03H,#0FFH
+028B 750000   F     1583             MOV     ?_strstr?BYTE+04H,#HIGH (?SC_89)
+028E 750000   F     1584             MOV     ?_strstr?BYTE+05H,#LOW (?SC_89)
+0291 7B01           1585             MOV     R3,#01H
+0293 7A00     F     1586             MOV     R2,#HIGH (receiveStr)
+0295 7900     F     1587             MOV     R1,#LOW (receiveStr)
+0297 120000   F     1588             LCALL   _strstr
+029A E9             1589             MOV     A,R1
+029B 4A             1590             ORL     A,R2
+029C 4B             1591             ORL     A,R3
+029D 6048           1592             JZ      ?C0047
+                    1593     ;         cmdtype = CMD_SET_CMOD;
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    26
+
+                    1594                             ; SOURCE LINE # 220
+029F 75000B   F     1595             MOV     cmdtype,#0BH
+                    1596     ;         p = strstr((char*)receiveStr, ":") + 1;
+                    1597                             ; SOURCE LINE # 221
+02A2 7500FF   F     1598             MOV     ?_strstr?BYTE+03H,#0FFH
+02A5 750000   F     1599             MOV     ?_strstr?BYTE+04H,#HIGH (?SC_27)
+02A8 750000   F     1600             MOV     ?_strstr?BYTE+05H,#LOW (?SC_27)
+02AB 7B01           1601             MOV     R3,#01H
+02AD 7A00     F     1602             MOV     R2,#HIGH (receiveStr)
+02AF 7900     F     1603             MOV     R1,#LOW (receiveStr)
+02B1 120000   F     1604             LCALL   _strstr
+02B4 E9             1605             MOV     A,R1
+02B5 2401           1606             ADD     A,#01H
+02B7 F9             1607             MOV     R1,A
+02B8 E4             1608             CLR     A
+02B9 3A             1609             ADDC    A,R2
+02BA FA             1610             MOV     R2,A
+02BB 900000   F     1611             MOV     DPTR,#p?1143
+02BE EB             1612             MOV     A,R3
+02BF F0             1613             MOVX    @DPTR,A
+02C0 A3             1614             INC     DPTR
+02C1 EA             1615             MOV     A,R2
+02C2 F0             1616             MOVX    @DPTR,A
+02C3 A3             1617             INC     DPTR
+02C4 E9             1618             MOV     A,R1
+02C5 F0             1619             MOVX    @DPTR,A
+                    1620     ;         strcpy((char*)proc_str, p);
+                    1621                             ; SOURCE LINE # 222
+02C6 7800     F     1622             MOV     R0,#LOW (proc_str?1144)
+02C8 7C00     F     1623             MOV     R4,#HIGH (proc_str?1144)
+02CA 7D01           1624             MOV     R5,#01H
+02CC 900000   F     1625             MOV     DPTR,#p?1143
+02CF E0             1626             MOVX    A,@DPTR
+02D0 FB             1627             MOV     R3,A
+02D1 A3             1628             INC     DPTR
+02D2 E0             1629             MOVX    A,@DPTR
+02D3 FA             1630             MOV     R2,A
+02D4 A3             1631             INC     DPTR
+02D5 E0             1632             MOVX    A,@DPTR
+02D6 F9             1633             MOV     R1,A
+02D7 120000   F     1634             LCALL   ?C?STRCPY
+                    1635     ;         CMOD = (char)atoi((char*)proc_str);
+                    1636                             ; SOURCE LINE # 223
+02DA 7B01           1637             MOV     R3,#01H
+02DC 7A00     F     1638             MOV     R2,#HIGH (proc_str?1144)
+02DE 7900     F     1639             MOV     R1,#LOW (proc_str?1144)
+02E0 120000   F     1640             LCALL   _atoi
+02E3 8FD9           1641             MOV     CMOD,R7
+                    1642     ;     }
+                    1643                             ; SOURCE LINE # 224
+02E5 8003           1644             SJMP    ?C0030
+02E7                1645     ?C0047:
+                    1646     ; 
+                    1647     ;     else {
+                    1648                             ; SOURCE LINE # 226
+                    1649     ;         cmdtype = CMD_INVALID;
+                    1650                             ; SOURCE LINE # 227
+02E7 E4             1651             CLR     A
+02E8 F500     F     1652             MOV     cmdtype,A
+                    1653     ;     }
+                    1654                             ; SOURCE LINE # 228
+02EA                1655     ?C0030:
+                    1656     ;     receiveStrPtr = receiveStr;
+                    1657                             ; SOURCE LINE # 229
+02EA 900000   F     1658             MOV     DPTR,#receiveStrPtr
+02ED 7401           1659             MOV     A,#01H
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    27
+
+02EF F0             1660             MOVX    @DPTR,A
+02F0 A3             1661             INC     DPTR
+02F1 7400     F     1662             MOV     A,#HIGH (receiveStr)
+02F3 F0             1663             MOVX    @DPTR,A
+02F4 A3             1664             INC     DPTR
+02F5 7400     F     1665             MOV     A,#LOW (receiveStr)
+02F7 F0             1666             MOVX    @DPTR,A
+                    1667     ;     return cmdtype;
+                    1668                             ; SOURCE LINE # 230
+02F8 AF00     F     1669             MOV     R7,cmdtype
+                    1670     ; }
+                    1671                             ; SOURCE LINE # 231
+02FA 22             1672             RET     
+                    1673     ; END OF runUARTCommand
+                    1674     
+                    1675     ; 
+                    1676     ; void main() {
+                    1677     
+----                1678             RSEG  ?PR?main?MAIN
+0000                1679     main:
+                    1680             USING   0
+                    1681                             ; SOURCE LINE # 233
+                    1682     ;     int i = 0;
+                    1683                             ; SOURCE LINE # 234
+0000 E4             1684             CLR     A
+0001 F500     F     1685             MOV     i?1245,A
+0003 F500     F     1686             MOV     i?1245+01H,A
+                    1687     ;     P0M0 = 0x00;
+                    1688                             ; SOURCE LINE # 235
+0005 F594           1689             MOV     P0M0,A
+                    1690     ;     P0M1 = 0x00;
+                    1691                             ; SOURCE LINE # 236
+0007 F593           1692             MOV     P0M1,A
+                    1693     ;     P1M0 = 0x1 << 2;
+                    1694                             ; SOURCE LINE # 237
+0009 759204         1695             MOV     P1M0,#04H
+                    1696     ;     P1M1 = 0x00;
+                    1697                             ; SOURCE LINE # 238
+000C F591           1698             MOV     P1M1,A
+                    1699     ;     P2M0 = 0x00;
+                    1700                             ; SOURCE LINE # 239
+000E F596           1701             MOV     P2M0,A
+                    1702     ;     P2M1 = 0x00;
+                    1703                             ; SOURCE LINE # 240
+0010 F595           1704             MOV     P2M1,A
+                    1705     ;     P3M0 = 0x00;
+                    1706                             ; SOURCE LINE # 241
+0012 F5B2           1707             MOV     P3M0,A
+                    1708     ;     P3M1 = 0x00;
+                    1709                             ; SOURCE LINE # 242
+0014 F5B1           1710             MOV     P3M1,A
+                    1711     ;     P4M0 = 0x00;
+                    1712                             ; SOURCE LINE # 243
+0016 F5B4           1713             MOV     P4M0,A
+                    1714     ;     P4M1 = 0x00;
+                    1715                             ; SOURCE LINE # 244
+0018 F5B3           1716             MOV     P4M1,A
+                    1717     ;     P5M0 = 0x00;
+                    1718                             ; SOURCE LINE # 245
+001A F5CA           1719             MOV     P5M0,A
+                    1720     ;     P5M1 = 0x00;
+                    1721                             ; SOURCE LINE # 246
+001C F5C9           1722             MOV     P5M1,A
+                    1723     ;     PCAInit();
+                    1724                             ; SOURCE LINE # 247
+001E 120000   F     1725             LCALL   PCAInit
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    28
+
+                    1726     ;     Uart2Init();
+                    1727                             ; SOURCE LINE # 248
+0021 120000   F     1728             LCALL   Uart2Init
+                    1729     ;     TIM0_Init();
+                    1730                             ; SOURCE LINE # 249
+0024 120000   F     1731             LCALL   TIM0_Init
+                    1732     ; 
+                    1733     ; 
+                    1734     ;     IE2 = 0x01;
+                    1735                             ; SOURCE LINE # 252
+0027 75AF01         1736             MOV     IE2,#01H
+                    1737     ;     IP = 0x80;
+                    1738                             ; SOURCE LINE # 253
+002A 75B880         1739             MOV     IP,#080H
+                    1740     ;     IPH = 0x80;
+                    1741                             ; SOURCE LINE # 254
+002D 75B780         1742             MOV     IPH,#080H
+                    1743     ;     IP2 = 0x00;
+                    1744                             ; SOURCE LINE # 255
+0030 E4             1745             CLR     A
+0031 F5B5           1746             MOV     IP2,A
+                    1747     ;     IP2H = 0x01;
+                    1748                             ; SOURCE LINE # 256
+0033 75B601         1749             MOV     IP2H,#01H
+                    1750     ;     EA = 1;
+                    1751                             ; SOURCE LINE # 257
+0036 D2AF           1752             SETB    EA
+                    1753     ;     Uart2SendStr(uartStartMsg);
+                    1754                             ; SOURCE LINE # 258
+0038 7B01           1755             MOV     R3,#01H
+003A 7A00     F     1756             MOV     R2,#HIGH (uartStartMsg)
+003C 7900     F     1757             MOV     R1,#LOW (uartStartMsg)
+003E 120000   F     1758             LCALL   _?Uart2SendStr
+0041                1759     ?C0050:
+                    1760     ; 
+                    1761     ;     while (1) {
+                    1762                             ; SOURCE LINE # 260
+                    1763     ;         Delay1000ms();
+                    1764                             ; SOURCE LINE # 261
+0041 120000   F     1765             LCALL   Delay1000ms
+                    1766     ;         CMODVal = CMOD;
+                    1767                             ; SOURCE LINE # 262
+0044 AFD9           1768             MOV     R7,CMOD
+0046 900000   F     1769             MOV     DPTR,#CMODVal
+0049 E4             1770             CLR     A
+004A F0             1771             MOVX    @DPTR,A
+004B A3             1772             INC     DPTR
+004C EF             1773             MOV     A,R7
+004D F0             1774             MOVX    @DPTR,A
+                    1775     ;         sprintf(repeatMsg, "/status:speed=%.2f,pwmVal=%d,CMOD=%#X;\r\n", \
+                    1776                             ; SOURCE LINE # 263
+004E 7500FF   F     1777             MOV     ?_sprintf?BYTE+03H,#0FFH
+0051 750000   F     1778             MOV     ?_sprintf?BYTE+04H,#HIGH (?SC_96)
+0054 750000   F     1779             MOV     ?_sprintf?BYTE+05H,#LOW (?SC_96)
+0057 900000   F     1780             MOV     DPTR,#speed
+005A E0             1781             MOVX    A,@DPTR
+005B FC             1782             MOV     R4,A
+005C A3             1783             INC     DPTR
+005D E0             1784             MOVX    A,@DPTR
+005E FD             1785             MOV     R5,A
+005F A3             1786             INC     DPTR
+0060 E0             1787             MOVX    A,@DPTR
+0061 FE             1788             MOV     R6,A
+0062 A3             1789             INC     DPTR
+0063 E0             1790             MOVX    A,@DPTR
+0064 F500     F     1791             MOV     ?_sprintf?BYTE+09H,A
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    29
+
+0066 8E00     F     1792             MOV     ?_sprintf?BYTE+08H,R6
+0068 8D00     F     1793             MOV     ?_sprintf?BYTE+07H,R5
+006A 8C00     F     1794             MOV     ?_sprintf?BYTE+06H,R4
+006C 900000   F     1795             MOV     DPTR,#pwmVal
+006F E0             1796             MOVX    A,@DPTR
+0070 F500     F     1797             MOV     ?_sprintf?BYTE+0AH,A
+0072 A3             1798             INC     DPTR
+0073 E0             1799             MOVX    A,@DPTR
+0074 F500     F     1800             MOV     ?_sprintf?BYTE+0BH,A
+0076 900000   F     1801             MOV     DPTR,#CMODVal
+0079 E0             1802             MOVX    A,@DPTR
+007A F500     F     1803             MOV     ?_sprintf?BYTE+0CH,A
+007C A3             1804             INC     DPTR
+007D E0             1805             MOVX    A,@DPTR
+007E F500     F     1806             MOV     ?_sprintf?BYTE+0DH,A
+0080 7B01           1807             MOV     R3,#01H
+0082 7A00     F     1808             MOV     R2,#HIGH (repeatMsg)
+0084 7900     F     1809             MOV     R1,#LOW (repeatMsg)
+0086 120000   F     1810             LCALL   _sprintf
+                    1811     ;             speed, pwmVal, CMODVal);
+                    1812     ;         Uart2SendStr(repeatMsg);
+                    1813                             ; SOURCE LINE # 265
+0089 7B01           1814             MOV     R3,#01H
+008B 7A00     F     1815             MOV     R2,#HIGH (repeatMsg)
+008D 7900     F     1816             MOV     R1,#LOW (repeatMsg)
+008F 120000   F     1817             LCALL   _?Uart2SendStr
+                    1818     ; 
+                    1819     ; 
+                    1820     ;     }
+                    1821                             ; SOURCE LINE # 268
+0092 80AD           1822             SJMP    ?C0050
+                    1823     ; END OF main
+                    1824     
+                    1825     ; }
+                    1826     ; 
+                    1827     ; 
+                    1828     ; void Delay1000ms()            //@11.0592MHz
+                    1829     
+----                1830             RSEG  ?PR?Delay1000ms?MAIN
+0000                1831     Delay1000ms:
+                    1832             USING   0
+                    1833                             ; SOURCE LINE # 272
+                    1834     ; {
+                    1835                             ; SOURCE LINE # 273
+                    1836     ;     unsigned char i, j, k;
+                    1837     ; 
+                    1838     ;     i = 57;
+                    1839                             ; SOURCE LINE # 276
+                    1840     ;---- Variable 'i?1346' assigned to Register 'R7' ----
+0000 7F39           1841             MOV     R7,#039H
+                    1842     ;     j = 27;
+                    1843                             ; SOURCE LINE # 277
+                    1844     ;---- Variable 'j?1347' assigned to Register 'R6' ----
+0002 7E1B           1845             MOV     R6,#01BH
+                    1846     ;     k = 112;
+                    1847                             ; SOURCE LINE # 278
+                    1848     ;---- Variable 'k?1348' assigned to Register 'R5' ----
+0004 7D70           1849             MOV     R5,#070H
+                    1850     ;     do {
+                    1851                             ; SOURCE LINE # 279
+                    1852     ;         do {
+                    1853                             ; SOURCE LINE # 280
+0006                1854     ?C0059:
+                    1855     ;             while (--k);
+                    1856                             ; SOURCE LINE # 281
+0006 DDFE           1857             DJNZ    R5,?C0059
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    30
+
+                    1858     ;         } while (--j);
+                    1859                             ; SOURCE LINE # 282
+0008 DEFC           1860             DJNZ    R6,?C0059
+                    1861     ;     } while (--i);
+                    1862                             ; SOURCE LINE # 283
+000A DFFA           1863             DJNZ    R7,?C0059
+                    1864     ; }
+                    1865                             ; SOURCE LINE # 284
+000C 22             1866             RET     
+                    1867     ; END OF Delay1000ms
+                    1868     
+                    1869     ; 
+                    1870     ; 
+                    1871     ; void getOutputMsg(char* msg) {
+                    1872     
+----                1873             RSEG  ?PR?_getOutputMsg?MAIN
+0000                1874     _getOutputMsg:
+                    1875             USING   0
+                    1876                             ; SOURCE LINE # 287
+0000 8B00     F     1877             MOV     msg?1449,R3
+0002 8A00     F     1878             MOV     msg?1449+01H,R2
+0004 8900     F     1879             MOV     msg?1449+02H,R1
+                    1880     ;     CMODVal = CMOD;
+                    1881                             ; SOURCE LINE # 288
+0006 AFD9           1882             MOV     R7,CMOD
+0008 900000   F     1883             MOV     DPTR,#CMODVal
+000B E4             1884             CLR     A
+000C F0             1885             MOVX    @DPTR,A
+000D A3             1886             INC     DPTR
+000E EF             1887             MOV     A,R7
+000F F0             1888             MOVX    @DPTR,A
+                    1889     ;     clearMsg(msg, sizeof(msg));
+                    1890                             ; SOURCE LINE # 289
+0010 7E00           1891             MOV     R6,#00H
+0012 7F03           1892             MOV     R7,#03H
+0014 7D00           1893             MOV     R5,#00H
+0016 120000   F     1894             LCALL   ?C?MEMSET
+                    1895     ;     sprintf(msg, "/get:speed=%.2f,pwmVal=%d,CMOD=%#X;\r\n", \
+                    1896                             ; SOURCE LINE # 290
+0019 7500FF   F     1897             MOV     ?_sprintf?BYTE+03H,#0FFH
+001C 750000   F     1898             MOV     ?_sprintf?BYTE+04H,#HIGH (?SC_137)
+001F 750000   F     1899             MOV     ?_sprintf?BYTE+05H,#LOW (?SC_137)
+0022 900000   F     1900             MOV     DPTR,#speed
+0025 E0             1901             MOVX    A,@DPTR
+0026 FC             1902             MOV     R4,A
+0027 A3             1903             INC     DPTR
+0028 E0             1904             MOVX    A,@DPTR
+0029 FD             1905             MOV     R5,A
+002A A3             1906             INC     DPTR
+002B E0             1907             MOVX    A,@DPTR
+002C FE             1908             MOV     R6,A
+002D A3             1909             INC     DPTR
+002E E0             1910             MOVX    A,@DPTR
+002F F500     F     1911             MOV     ?_sprintf?BYTE+09H,A
+0031 8E00     F     1912             MOV     ?_sprintf?BYTE+08H,R6
+0033 8D00     F     1913             MOV     ?_sprintf?BYTE+07H,R5
+0035 8C00     F     1914             MOV     ?_sprintf?BYTE+06H,R4
+0037 900000   F     1915             MOV     DPTR,#pwmVal
+003A E0             1916             MOVX    A,@DPTR
+003B F500     F     1917             MOV     ?_sprintf?BYTE+0AH,A
+003D A3             1918             INC     DPTR
+003E E0             1919             MOVX    A,@DPTR
+003F F500     F     1920             MOV     ?_sprintf?BYTE+0BH,A
+0041 900000   F     1921             MOV     DPTR,#CMODVal
+0044 E0             1922             MOVX    A,@DPTR
+0045 F500     F     1923             MOV     ?_sprintf?BYTE+0CH,A
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    31
+
+0047 A3             1924             INC     DPTR
+0048 E0             1925             MOVX    A,@DPTR
+0049 F500     F     1926             MOV     ?_sprintf?BYTE+0DH,A
+004B AB00     F     1927             MOV     R3,msg?1449
+004D AA00     F     1928             MOV     R2,msg?1449+01H
+004F A900     F     1929             MOV     R1,msg?1449+02H
+0051 020000   F     1930             LJMP    _sprintf
+                    1931     ; END OF _getOutputMsg
+                    1932     
+                    1933             END
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    32
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E                     T Y P E  V A L U E   ATTRIBUTES
+
+?BI?MAIN . . . . . . . . .  B SEG    0002H       REL=UNIT
+?C0003 . . . . . . . . . .  C ADDR   004AH   R   SEG=?PR?TM0_ISR?MAIN
+?C0004 . . . . . . . . . .  C ADDR   004CH   R   SEG=?PR?TM0_ISR?MAIN
+?C0005 . . . . . . . . . .  C ADDR   0030H   R   SEG=?PR?UART2RECEIVESTR?MAIN
+?C0007 . . . . . . . . . .  C ADDR   0049H   R   SEG=?PR?UART2RECEIVESTR?MAIN
+?C0008 . . . . . . . . . .  C ADDR   0021H   R   SEG=?PR?UART2ISR?MAIN
+?C0010 . . . . . . . . . .  C ADDR   005AH   R   SEG=?PR?UART2ISR?MAIN
+?C0011 . . . . . . . . . .  C ADDR   00DFH   R   SEG=?PR?UART2ISR?MAIN
+?C0013 . . . . . . . . . .  C ADDR   006AH   R   SEG=?PR?UART2ISR?MAIN
+?C0015 . . . . . . . . . .  C ADDR   0091H   R   SEG=?PR?UART2ISR?MAIN
+?C0016 . . . . . . . . . .  C ADDR   00BFH   R   SEG=?PR?UART2ISR?MAIN
+?C0017 . . . . . . . . . .  C ADDR   00CFH   R   SEG=?PR?UART2ISR?MAIN
+?C0019 . . . . . . . . . .  C ADDR   0000H   R   SEG=?PR?_UART2SEND?MAIN
+?C0022 . . . . . . . . . .  C ADDR   0016H   R   SEG=?PR?_?UART2SENDSTR?MAIN
+?C0024 . . . . . . . . . .  C ADDR   003EH   R   SEG=?PR?_?UART2SENDSTR?MAIN
+?C0029 . . . . . . . . . .  C ADDR   0037H   R   SEG=?PR?RUNUARTCOMMAND?MAIN
+?C0030 . . . . . . . . . .  C ADDR   02EAH   R   SEG=?PR?RUNUARTCOMMAND?MAIN
+?C0031 . . . . . . . . . .  C ADDR   0095H   R   SEG=?PR?RUNUARTCOMMAND?MAIN
+?C0033 . . . . . . . . . .  C ADDR   0114H   R   SEG=?PR?RUNUARTCOMMAND?MAIN
+?C0035 . . . . . . . . . .  C ADDR   01A4H   R   SEG=?PR?RUNUARTCOMMAND?MAIN
+?C0037 . . . . . . . . . .  C ADDR   01C3H   R   SEG=?PR?RUNUARTCOMMAND?MAIN
+?C0039 . . . . . . . . . .  C ADDR   01E2H   R   SEG=?PR?RUNUARTCOMMAND?MAIN
+?C0041 . . . . . . . . . .  C ADDR   0201H   R   SEG=?PR?RUNUARTCOMMAND?MAIN
+?C0043 . . . . . . . . . .  C ADDR   0220H   R   SEG=?PR?RUNUARTCOMMAND?MAIN
+?C0045 . . . . . . . . . .  C ADDR   0288H   R   SEG=?PR?RUNUARTCOMMAND?MAIN
+?C0047 . . . . . . . . . .  C ADDR   02E7H   R   SEG=?PR?RUNUARTCOMMAND?MAIN
+?C0050 . . . . . . . . . .  C ADDR   0041H   R   SEG=?PR?MAIN?MAIN
+?C0059 . . . . . . . . . .  C ADDR   0006H   R   SEG=?PR?DELAY1000MS?MAIN
+?C0063 . . . . . . . . . .  C ADDR   001BH   R   SEG=?PR?UART2RECEIVESTR?MAIN
+?C0064 . . . . . . . . . .  C ADDR   004DH   R   SEG=?PR?UART2ISR?MAIN
+?C0065 . . . . . . . . . .  C ADDR   0088H   R   SEG=?PR?UART2ISR?MAIN
+?C0066 . . . . . . . . . .  C ADDR   00ACH   R   SEG=?PR?UART2ISR?MAIN
+?C0067 . . . . . . . . . .  C ADDR   0033H   R   SEG=?PR?_?UART2SENDSTR?MAIN
+?C0078 . . . . . . . . . .  C ADDR   0046H   R   SEG=?PR?UART2RECEIVESTR?MAIN
+?C0079 . . . . . . . . . .  C ADDR   0111H   R   SEG=?PR?RUNUARTCOMMAND?MAIN
+?C0080 . . . . . . . . . .  C ADDR   0198H   R   SEG=?PR?RUNUARTCOMMAND?MAIN
+?C?CLDPTR. . . . . . . . .  C ADDR   -----       EXT
+?C?CSTOPTR . . . . . . . .  C ADDR   -----       EXT
+?C?CSTPTR. . . . . . . . .  C ADDR   -----       EXT
+?C?FPADD . . . . . . . . .  C ADDR   -----       EXT
+?C?FPSUB . . . . . . . . .  C ADDR   -----       EXT
+?C?ILDIX . . . . . . . . .  C ADDR   -----       EXT
+?C?LSTXDATA. . . . . . . .  C ADDR   -----       EXT
+?C?MEMSET. . . . . . . . .  C ADDR   -----       EXT
+?C?STRCPY. . . . . . . . .  C ADDR   -----       EXT
+?CO?MAIN . . . . . . . . .  C SEG    00AFH       REL=UNIT
+?C_IBP . . . . . . . . . .  D ADDR   -----       EXT
+?C_INITSEG . . . . . . . .  C SEG    0074H       REL=UNIT
+?C_STARTUP . . . . . . . .  C ADDR   -----       EXT
+?DT?MAIN . . . . . . . . .  D SEG    0001H       REL=UNIT
+?DT?MAIN?MAIN. . . . . . .  D SEG    0002H       REL=UNIT
+?DT?_GETOUTPUTMSG?MAIN . .  D SEG    0003H       REL=UNIT
+?MAIN?BYTE . . . . . . . .  D ADDR   0000H   R   SEG=?DT?MAIN?MAIN
+?PR?DELAY1000MS?MAIN . . .  C SEG    000DH       REL=UNIT
+?PR?MAIN?MAIN. . . . . . .  C SEG    0094H       REL=UNIT
+?PR?PCAINIT?MAIN . . . . .  C SEG    001CH       REL=UNIT
+?PR?PCA_ROUTINE?MAIN . . .  C SEG    0003H       REL=UNIT
+?PR?RUNUARTCOMMAND?MAIN. .  C SEG    02FBH       REL=UNIT
+?PR?SETMETERWITHSPEED?MAIN  C SEG    000BH       REL=UNIT
+?PR?TIM0_INIT?MAIN . . . .  C SEG    0013H       REL=UNIT
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    33
+
+?PR?TM0_ISR?MAIN . . . . .  C SEG    0067H       REL=UNIT
+?PR?UART2INIT?MAIN . . . .  C SEG    000FH       REL=UNIT
+?PR?UART2ISR?MAIN. . . . .  C SEG    00F4H       REL=UNIT
+?PR?UART2RECEIVESTR?MAIN .  C SEG    004AH       REL=UNIT
+?PR?_?UART2SENDSTR?MAIN. .  C SEG    0045H       REL=UNIT
+?PR?_GETOUTPUTMSG?MAIN . .  C SEG    0054H       REL=UNIT
+?PR?_UART2SEND?MAIN. . . .  C SEG    0008H       REL=UNIT
+?PR?_WRITEPWMVALUE?MAIN. .  C SEG    001FH       REL=UNIT
+?SC_0. . . . . . . . . . .  C ADDR   0000H   R   SEG=?CO?MAIN
+?SC_137. . . . . . . . . .  C ADDR   0089H   R   SEG=?CO?MAIN
+?SC_16 . . . . . . . . . .  C ADDR   0010H   R   SEG=?CO?MAIN
+?SC_21 . . . . . . . . . .  C ADDR   0015H   R   SEG=?CO?MAIN
+?SC_27 . . . . . . . . . .  C ADDR   001BH   R   SEG=?CO?MAIN
+?SC_29 . . . . . . . . . .  C ADDR   001DH   R   SEG=?CO?MAIN
+?SC_35 . . . . . . . . . .  C ADDR   0023H   R   SEG=?CO?MAIN
+?SC_41 . . . . . . . . . .  C ADDR   0029H   R   SEG=?CO?MAIN
+?SC_52 . . . . . . . . . .  C ADDR   0034H   R   SEG=?CO?MAIN
+?SC_64 . . . . . . . . . .  C ADDR   0040H   R   SEG=?CO?MAIN
+?SC_73 . . . . . . . . . .  C ADDR   0049H   R   SEG=?CO?MAIN
+?SC_83 . . . . . . . . . .  C ADDR   0053H   R   SEG=?CO?MAIN
+?SC_89 . . . . . . . . . .  C ADDR   0059H   R   SEG=?CO?MAIN
+?SC_96 . . . . . . . . . .  C ADDR   0060H   R   SEG=?CO?MAIN
+?XD?MAIN . . . . . . . . .  X SEG    00A4H       REL=UNIT
+?XD?RUNUARTCOMMAND?MAIN. .  X SEG    0086H       REL=UNIT
+?_GETOUTPUTMSG?BYTE. . . .  D ADDR   0000H   R   SEG=?DT?_GETOUTPUTMSG?MAIN
+?_SPRINTF?BYTE . . . . . .  D ADDR   -----       EXT
+?_STRCAT?BYTE. . . . . . .  D ADDR   -----       EXT
+?_STRSTR?BYTE. . . . . . .  D ADDR   -----       EXT
+AC . . . . . . . . . . . .  B ADDR   00D0H.6 A   
+ACC. . . . . . . . . . . .  D ADDR   00E0H   A   
+ADCCFG . . . . . . . . . .  D ADDR   00DEH   A   
+ADC_CONTR. . . . . . . . .  D ADDR   00BCH   A   
+ADC_RES. . . . . . . . . .  D ADDR   00BDH   A   
+ADC_RESL . . . . . . . . .  D ADDR   00BEH   A   
+AR0. . . . . . . . . . . .  D ADDR   0000H   A   
+AR1. . . . . . . . . . . .  D ADDR   0001H   A   
+AR2. . . . . . . . . . . .  D ADDR   0002H   A   
+AR3. . . . . . . . . . . .  D ADDR   0003H   A   
+AR4. . . . . . . . . . . .  D ADDR   0004H   A   
+AR5. . . . . . . . . . . .  D ADDR   0005H   A   
+AR6. . . . . . . . . . . .  D ADDR   0006H   A   
+AR7. . . . . . . . . . . .  D ADDR   0007H   A   
+AUXINTIF . . . . . . . . .  D ADDR   00EFH   A   
+AUXR . . . . . . . . . . .  D ADDR   008EH   A   
+B. . . . . . . . . . . . .  D ADDR   00F0H   A   
+BUSY . . . . . . . . . . .  B ADDR   0000H.0 R   SEG=?BI?MAIN
+CCAP0H . . . . . . . . . .  D ADDR   00FAH   A   
+CCAP0L . . . . . . . . . .  D ADDR   00EAH   A   
+CCAP1H . . . . . . . . . .  D ADDR   00FBH   A   
+CCAP1L . . . . . . . . . .  D ADDR   00EBH   A   
+CCAP2H . . . . . . . . . .  D ADDR   00FCH   A   
+CCAP2L . . . . . . . . . .  D ADDR   00ECH   A   
+CCAPM0 . . . . . . . . . .  D ADDR   00DAH   A   
+CCAPM1 . . . . . . . . . .  D ADDR   00DBH   A   
+CCAPM2 . . . . . . . . . .  D ADDR   00DCH   A   
+CCF0 . . . . . . . . . . .  B ADDR   00D8H.0 A   
+CCF1 . . . . . . . . . . .  B ADDR   00D8H.1 A   
+CCF2 . . . . . . . . . . .  B ADDR   00D8H.2 A   
+CCON . . . . . . . . . . .  D ADDR   00D8H   A   
+CF . . . . . . . . . . . .  B ADDR   00D8H.7 A   
+CH . . . . . . . . . . . .  D ADDR   00F9H   A   
+CL . . . . . . . . . . . .  D ADDR   00E9H   A   
+CMDTYPE. . . . . . . . . .  D ADDR   0000H   R   SEG=?DT?MAIN
+CMOD . . . . . . . . . . .  D ADDR   00D9H   A   
+CMODVAL. . . . . . . . . .  X ADDR   0084H   R   SEG=?XD?MAIN
+CMPCR1 . . . . . . . . . .  D ADDR   00E6H   A   
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    34
+
+CMPCR2 . . . . . . . . . .  D ADDR   00E7H   A   
+CR . . . . . . . . . . . .  B ADDR   00D8H.6 A   
+CY . . . . . . . . . . . .  B ADDR   00D0H.7 A   
+DELAY1000MS. . . . . . . .  C ADDR   0000H   R   SEG=?PR?DELAY1000MS?MAIN
+DPH. . . . . . . . . . . .  D ADDR   0083H   A   
+DPH1 . . . . . . . . . . .  D ADDR   00E5H   A   
+DPL. . . . . . . . . . . .  D ADDR   0082H   A   
+DPL1 . . . . . . . . . . .  D ADDR   00E4H   A   
+DPS. . . . . . . . . . . .  D ADDR   00E3H   A   
+EA . . . . . . . . . . . .  B ADDR   00A8H.7 A   
+EADC . . . . . . . . . . .  B ADDR   00A8H.5 A   
+ELVD . . . . . . . . . . .  B ADDR   00A8H.6 A   
+ES . . . . . . . . . . . .  B ADDR   00A8H.4 A   
+ET0. . . . . . . . . . . .  B ADDR   00A8H.1 A   
+ET1. . . . . . . . . . . .  B ADDR   00A8H.3 A   
+EX0. . . . . . . . . . . .  B ADDR   00A8H.0 A   
+EX1. . . . . . . . . . . .  B ADDR   00A8H.2 A   
+F0 . . . . . . . . . . . .  B ADDR   00D0H.5 A   
+F1 . . . . . . . . . . . .  B ADDR   00D0H.1 A   
+I?1245 . . . . . . . . . .  D ADDR   0000H   R   SEG=?DT?MAIN?MAIN
+IAP_ADDRH. . . . . . . . .  D ADDR   00C3H   A   
+IAP_ADDRL. . . . . . . . .  D ADDR   00C4H   A   
+IAP_CMD. . . . . . . . . .  D ADDR   00C5H   A   
+IAP_CONTR. . . . . . . . .  D ADDR   00C7H   A   
+IAP_DATA . . . . . . . . .  D ADDR   00C2H   A   
+IAP_TPS. . . . . . . . . .  D ADDR   00F5H   A   
+IAP_TRIG . . . . . . . . .  D ADDR   00C6H   A   
+IE . . . . . . . . . . . .  D ADDR   00A8H   A   
+IE0. . . . . . . . . . . .  B ADDR   0088H.1 A   
+IE1. . . . . . . . . . . .  B ADDR   0088H.3 A   
+IE2. . . . . . . . . . . .  D ADDR   00AFH   A   
+INTCLKO. . . . . . . . . .  D ADDR   008FH   A   
+IP . . . . . . . . . . . .  D ADDR   00B8H   A   
+IP2. . . . . . . . . . . .  D ADDR   00B5H   A   
+IP2H . . . . . . . . . . .  D ADDR   00B6H   A   
+IP3. . . . . . . . . . . .  D ADDR   00DFH   A   
+IP3H . . . . . . . . . . .  D ADDR   00EEH   A   
+IPH. . . . . . . . . . . .  D ADDR   00B7H   A   
+IRCBAND. . . . . . . . . .  D ADDR   009DH   A   
+IRTRIM . . . . . . . . . .  D ADDR   009FH   A   
+IT0. . . . . . . . . . . .  B ADDR   0088H.0 A   
+IT1. . . . . . . . . . . .  B ADDR   0088H.2 A   
+L?0081 . . . . . . . . . .  C ADDR   0000H   R   SEG=?PR?_?UART2SENDSTR?MAIN
+LIRTRIM. . . . . . . . . .  D ADDR   009EH   A   
+MAIN . . . . . . . . . . .  C ADDR   0000H   R   SEG=?PR?MAIN?MAIN
+MSG. . . . . . . . . . . .  X ADDR   0064H   R   SEG=?XD?MAIN
+MSG?1449 . . . . . . . . .  D ADDR   0000H   R   SEG=?DT?_GETOUTPUTMSG?MAIN
+OV . . . . . . . . . . . .  B ADDR   00D0H.2 A   
+P. . . . . . . . . . . . .  B ADDR   00D0H.0 A   
+P0 . . . . . . . . . . . .  D ADDR   0080H   A   
+P00. . . . . . . . . . . .  B ADDR   0080H.0 A   
+P01. . . . . . . . . . . .  B ADDR   0080H.1 A   
+P02. . . . . . . . . . . .  B ADDR   0080H.2 A   
+P03. . . . . . . . . . . .  B ADDR   0080H.3 A   
+P04. . . . . . . . . . . .  B ADDR   0080H.4 A   
+P05. . . . . . . . . . . .  B ADDR   0080H.5 A   
+P06. . . . . . . . . . . .  B ADDR   0080H.6 A   
+P07. . . . . . . . . . . .  B ADDR   0080H.7 A   
+P0M0 . . . . . . . . . . .  D ADDR   0094H   A   
+P0M1 . . . . . . . . . . .  D ADDR   0093H   A   
+P1 . . . . . . . . . . . .  D ADDR   0090H   A   
+P10. . . . . . . . . . . .  B ADDR   0090H.0 A   
+P11. . . . . . . . . . . .  B ADDR   0090H.1 A   
+P12. . . . . . . . . . . .  B ADDR   0090H.2 A   
+P13. . . . . . . . . . . .  B ADDR   0090H.3 A   
+P14. . . . . . . . . . . .  B ADDR   0090H.4 A   
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    35
+
+P15. . . . . . . . . . . .  B ADDR   0090H.5 A   
+P16. . . . . . . . . . . .  B ADDR   0090H.6 A   
+P17. . . . . . . . . . . .  B ADDR   0090H.7 A   
+P1M0 . . . . . . . . . . .  D ADDR   0092H   A   
+P1M1 . . . . . . . . . . .  D ADDR   0091H   A   
+P2 . . . . . . . . . . . .  D ADDR   00A0H   A   
+P20. . . . . . . . . . . .  B ADDR   00A0H.0 A   
+P21. . . . . . . . . . . .  B ADDR   00A0H.1 A   
+P22. . . . . . . . . . . .  B ADDR   00A0H.2 A   
+P23. . . . . . . . . . . .  B ADDR   00A0H.3 A   
+P24. . . . . . . . . . . .  B ADDR   00A0H.4 A   
+P25. . . . . . . . . . . .  B ADDR   00A0H.5 A   
+P26. . . . . . . . . . . .  B ADDR   00A0H.6 A   
+P27. . . . . . . . . . . .  B ADDR   00A0H.7 A   
+P2M0 . . . . . . . . . . .  D ADDR   0096H   A   
+P2M1 . . . . . . . . . . .  D ADDR   0095H   A   
+P3 . . . . . . . . . . . .  D ADDR   00B0H   A   
+P30. . . . . . . . . . . .  B ADDR   00B0H.0 A   
+P31. . . . . . . . . . . .  B ADDR   00B0H.1 A   
+P32. . . . . . . . . . . .  B ADDR   00B0H.2 A   
+P33. . . . . . . . . . . .  B ADDR   00B0H.3 A   
+P34. . . . . . . . . . . .  B ADDR   00B0H.4 A   
+P35. . . . . . . . . . . .  B ADDR   00B0H.5 A   
+P36. . . . . . . . . . . .  B ADDR   00B0H.6 A   
+P37. . . . . . . . . . . .  B ADDR   00B0H.7 A   
+P3M0 . . . . . . . . . . .  D ADDR   00B2H   A   
+P3M1 . . . . . . . . . . .  D ADDR   00B1H   A   
+P4 . . . . . . . . . . . .  D ADDR   00C0H   A   
+P40. . . . . . . . . . . .  B ADDR   00C0H.0 A   
+P41. . . . . . . . . . . .  B ADDR   00C0H.1 A   
+P42. . . . . . . . . . . .  B ADDR   00C0H.2 A   
+P43. . . . . . . . . . . .  B ADDR   00C0H.3 A   
+P44. . . . . . . . . . . .  B ADDR   00C0H.4 A   
+P45. . . . . . . . . . . .  B ADDR   00C0H.5 A   
+P46. . . . . . . . . . . .  B ADDR   00C0H.6 A   
+P47. . . . . . . . . . . .  B ADDR   00C0H.7 A   
+P4M0 . . . . . . . . . . .  D ADDR   00B4H   A   
+P4M1 . . . . . . . . . . .  D ADDR   00B3H   A   
+P5 . . . . . . . . . . . .  D ADDR   00C8H   A   
+P50. . . . . . . . . . . .  B ADDR   00C8H.0 A   
+P51. . . . . . . . . . . .  B ADDR   00C8H.1 A   
+P52. . . . . . . . . . . .  B ADDR   00C8H.2 A   
+P53. . . . . . . . . . . .  B ADDR   00C8H.3 A   
+P54. . . . . . . . . . . .  B ADDR   00C8H.4 A   
+P55. . . . . . . . . . . .  B ADDR   00C8H.5 A   
+P56. . . . . . . . . . . .  B ADDR   00C8H.6 A   
+P57. . . . . . . . . . . .  B ADDR   00C8H.7 A   
+P5M0 . . . . . . . . . . .  D ADDR   00CAH   A   
+P5M1 . . . . . . . . . . .  D ADDR   00C9H   A   
+P6 . . . . . . . . . . . .  D ADDR   00E8H   A   
+P60. . . . . . . . . . . .  B ADDR   00E8H.0 A   
+P61. . . . . . . . . . . .  B ADDR   00E8H.1 A   
+P62. . . . . . . . . . . .  B ADDR   00E8H.2 A   
+P63. . . . . . . . . . . .  B ADDR   00E8H.3 A   
+P64. . . . . . . . . . . .  B ADDR   00E8H.4 A   
+P65. . . . . . . . . . . .  B ADDR   00E8H.5 A   
+P66. . . . . . . . . . . .  B ADDR   00E8H.6 A   
+P67. . . . . . . . . . . .  B ADDR   00E8H.7 A   
+P6M0 . . . . . . . . . . .  D ADDR   00CCH   A   
+P6M1 . . . . . . . . . . .  D ADDR   00CBH   A   
+P7 . . . . . . . . . . . .  D ADDR   00F8H   A   
+P70. . . . . . . . . . . .  B ADDR   00F8H.0 A   
+P71. . . . . . . . . . . .  B ADDR   00F8H.1 A   
+P72. . . . . . . . . . . .  B ADDR   00F8H.2 A   
+P73. . . . . . . . . . . .  B ADDR   00F8H.3 A   
+P74. . . . . . . . . . . .  B ADDR   00F8H.4 A   
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    36
+
+P75. . . . . . . . . . . .  B ADDR   00F8H.5 A   
+P76. . . . . . . . . . . .  B ADDR   00F8H.6 A   
+P77. . . . . . . . . . . .  B ADDR   00F8H.7 A   
+P7M0 . . . . . . . . . . .  D ADDR   00E2H   A   
+P7M1 . . . . . . . . . . .  D ADDR   00E1H   A   
+P?1143 . . . . . . . . . .  X ADDR   0003H   R   SEG=?XD?RUNUARTCOMMAND?MAIN
+PADC . . . . . . . . . . .  B ADDR   00B8H.5 A   
+PCAINIT. . . . . . . . . .  C ADDR   0000H   R   SEG=?PR?PCAINIT?MAIN
+PCA_PWM0 . . . . . . . . .  D ADDR   00F2H   A   
+PCA_PWM1 . . . . . . . . .  D ADDR   00F3H   A   
+PCA_PWM2 . . . . . . . . .  D ADDR   00F4H   A   
+PCA_ROUTINE. . . . . . . .  C ADDR   0000H   R   SEG=?PR?PCA_ROUTINE?MAIN
+PCON . . . . . . . . . . .  D ADDR   0087H   A   
+PLVD . . . . . . . . . . .  B ADDR   00B8H.6 A   
+PPCA . . . . . . . . . . .  B ADDR   00B8H.7 A   
+PROC_STR?1144. . . . . . .  X ADDR   0006H   R   SEG=?XD?RUNUARTCOMMAND?MAIN
+PS . . . . . . . . . . . .  B ADDR   00B8H.4 A   
+PSW. . . . . . . . . . . .  D ADDR   00D0H   A   
+PT0. . . . . . . . . . . .  B ADDR   00B8H.1 A   
+PT1. . . . . . . . . . . .  B ADDR   00B8H.3 A   
+PWMCFG01 . . . . . . . . .  D ADDR   00F6H   A   
+PWMCFG23 . . . . . . . . .  D ADDR   00F7H   A   
+PWMCFG45 . . . . . . . . .  D ADDR   00FEH   A   
+PWMSET . . . . . . . . . .  D ADDR   00F1H   A   
+PWMVAL . . . . . . . . . .  X ADDR   00A2H   R   SEG=?XD?MAIN
+PX0. . . . . . . . . . . .  B ADDR   00B8H.0 A   
+PX1. . . . . . . . . . . .  B ADDR   00B8H.2 A   
+P_SW1. . . . . . . . . . .  D ADDR   00A2H   A   
+P_SW2. . . . . . . . . . .  D ADDR   00BAH   A   
+RB8. . . . . . . . . . . .  B ADDR   0098H.2 A   
+RECEIVESTR . . . . . . . .  X ADDR   0004H   R   SEG=?XD?MAIN
+RECEIVESTRPTR. . . . . . .  X ADDR   0086H   R   SEG=?XD?MAIN
+REN. . . . . . . . . . . .  B ADDR   0098H.4 A   
+REPEATMSG. . . . . . . . .  X ADDR   0044H   R   SEG=?XD?MAIN
+RI . . . . . . . . . . . .  B ADDR   0098H.0 A   
+RS0. . . . . . . . . . . .  B ADDR   00D0H.3 A   
+RS1. . . . . . . . . . . .  B ADDR   00D0H.4 A   
+RSTCFG . . . . . . . . . .  D ADDR   00FFH   A   
+RUNUARTCOMMAND . . . . . .  C ADDR   0000H   R   SEG=?PR?RUNUARTCOMMAND?MAIN
+RXBUFFER . . . . . . . . .  X ADDR   0089H   R   SEG=?XD?MAIN
+S2BUF. . . . . . . . . . .  D ADDR   009BH   A   
+S2CON. . . . . . . . . . .  D ADDR   009AH   A   
+S3BUF. . . . . . . . . . .  D ADDR   00ADH   A   
+S3CON. . . . . . . . . . .  D ADDR   00ACH   A   
+S4BUF. . . . . . . . . . .  D ADDR   0085H   A   
+S4CON. . . . . . . . . . .  D ADDR   0084H   A   
+SADDR. . . . . . . . . . .  D ADDR   00A9H   A   
+SADEN. . . . . . . . . . .  D ADDR   00B9H   A   
+SBUF . . . . . . . . . . .  D ADDR   0099H   A   
+SCON . . . . . . . . . . .  D ADDR   0098H   A   
+SETMETERWITHSPEED. . . . .  C ADDR   0000H   R   SEG=?PR?SETMETERWITHSPEED?MAIN
+SHOULDPROCESS. . . . . . .  B ADDR   0000H.1 R   SEG=?BI?MAIN
+SM0. . . . . . . . . . . .  B ADDR   0098H.7 A   
+SM1. . . . . . . . . . . .  B ADDR   0098H.6 A   
+SM2. . . . . . . . . . . .  B ADDR   0098H.5 A   
+SP . . . . . . . . . . . .  D ADDR   0081H   A   
+SPCTL. . . . . . . . . . .  D ADDR   00CEH   A   
+SPDAT. . . . . . . . . . .  D ADDR   00CFH   A   
+SPEED. . . . . . . . . . .  X ADDR   0000H   R   SEG=?XD?MAIN
+SPEEDPOS?1142. . . . . . .  X ADDR   0000H   R   SEG=?XD?RUNUARTCOMMAND?MAIN
+SPSTAT . . . . . . . . . .  D ADDR   00CDH   A   
+T2H. . . . . . . . . . . .  D ADDR   00D6H   A   
+T2L. . . . . . . . . . . .  D ADDR   00D7H   A   
+T3H. . . . . . . . . . . .  D ADDR   00D4H   A   
+T3L. . . . . . . . . . . .  D ADDR   00D5H   A   
+T4H. . . . . . . . . . . .  D ADDR   00D2H   A   
+A51 MACRO ASSEMBLER  MAIN                                                                 07/24/2023 04:34:25 PAGE    37
+
+T4L. . . . . . . . . . . .  D ADDR   00D3H   A   
+T4T3M. . . . . . . . . . .  D ADDR   00D1H   A   
+TA . . . . . . . . . . . .  D ADDR   00AEH   A   
+TB8. . . . . . . . . . . .  B ADDR   0098H.3 A   
+TCON . . . . . . . . . . .  D ADDR   0088H   A   
+TF0. . . . . . . . . . . .  B ADDR   0088H.5 A   
+TF1. . . . . . . . . . . .  B ADDR   0088H.7 A   
+TH0. . . . . . . . . . . .  D ADDR   008CH   A   
+TH1. . . . . . . . . . . .  D ADDR   008DH   A   
+TI . . . . . . . . . . . .  B ADDR   0098H.1 A   
+TIM0_INIT. . . . . . . . .  C ADDR   0000H   R   SEG=?PR?TIM0_INIT?MAIN
+TL0. . . . . . . . . . . .  D ADDR   008AH   A   
+TL1. . . . . . . . . . . .  D ADDR   008BH   A   
+TM0_ISR. . . . . . . . . .  C ADDR   0000H   R   SEG=?PR?TM0_ISR?MAIN
+TMOD . . . . . . . . . . .  D ADDR   0089H   A   
+TR0. . . . . . . . . . . .  B ADDR   0088H.4 A   
+TR1. . . . . . . . . . . .  B ADDR   0088H.6 A   
+UART2INIT. . . . . . . . .  C ADDR   0000H   R   SEG=?PR?UART2INIT?MAIN
+UART2ISR . . . . . . . . .  C ADDR   0000H   R   SEG=?PR?UART2ISR?MAIN
+UART2RECEIVESTR. . . . . .  C ADDR   0000H   R   SEG=?PR?UART2RECEIVESTR?MAIN
+UARTSTARTMSG . . . . . . .  X ADDR   008BH   R   SEG=?XD?MAIN
+WDT_CONTR. . . . . . . . .  D ADDR   00C1H   A   
+WKTCH. . . . . . . . . . .  D ADDR   00ABH   A   
+WKTCL. . . . . . . . . . .  D ADDR   00AAH   A   
+XCCAP2H. . . . . . . . . .  X ADDR   008AH   R   SEG=?XD?MAIN
+_?UART2SENDSTR . . . . . .  C ADDR   0006H   R   SEG=?PR?_?UART2SENDSTR?MAIN
+_ATOF. . . . . . . . . . .  C ADDR   -----       EXT
+_ATOI. . . . . . . . . . .  C ADDR   -----       EXT
+_GETOUTPUTMSG. . . . . . .  C ADDR   0000H   R   SEG=?PR?_GETOUTPUTMSG?MAIN
+_SPRINTF . . . . . . . . .  C ADDR   -----       EXT
+_STRCAT. . . . . . . . . .  C ADDR   -----       EXT
+_STRSTR. . . . . . . . . .  C ADDR   -----       EXT
+_UART2SEND . . . . . . . .  C ADDR   0000H   R   SEG=?PR?_UART2SEND?MAIN
+_WRITEPWMVALUE . . . . . .  C ADDR   0000H   R   SEG=?PR?_WRITEPWMVALUE?MAIN
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
