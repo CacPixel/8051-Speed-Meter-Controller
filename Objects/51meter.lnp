@@ -1,3 +1,0 @@
-".\Objects\main.obj" 
-TO ".\Objects\51meter" 
-PRINT(".\Listings\51meter.m51") RAMSIZE(256) 
